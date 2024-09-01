@@ -2,32 +2,128 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Tajawal", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.slider-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  cursor: grab;
+  -ms-overflow-style: none; /* إخفاء شريط التمرير في إنترنت إكسبلورر */
+  scrollbar-width: none; /* إخفاء شريط التمرير في فايرفوكس */
+  cursor: grab; /* تغيير المؤشر عند التمرير */
+}
+a {
+  text-decoration: none;
+}
+.slider-container.active {
+  cursor: grabbing;
+}
+
+.slider {
+  position: relative;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: #11898c;
+  z-index: 10;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.bg-section {
+  position: relative;
+  background-image: url(../../public/d8d27454529feefb960ca27f627ee099.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 89, 91, 0.5); /* لون الخلفية الشفاف */
+  z-index: 1;
+}
+
+.bg-section > div {
+  position: relative;
+  z-index: 2;
+}
+
+.active {
+  background-color: #11898c !important;
+  color: #11898c;
+}
+.search {
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
+    url(../images/e2d0dcddf49fe50edc3e55fd46167996.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.training {
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
+    url(../images/b84c9b40b64ee90e7d4edebb05a9bd28.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.suport {
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
+    url(../images/0b5b59176accb0e4f6f6caa29fb87e3a.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mange {
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
+    url(../images/59edae449e7756a6aad1f8c5fe99d2f2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
