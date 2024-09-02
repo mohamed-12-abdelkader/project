@@ -8,7 +8,7 @@ const index = () => {
         <p className="text-[#11898C] my-"> الاخبار </p>
         <div className="w-[60%] m-auto text-center ">
           <h1
-            className="font-bold  text-[50px] text-[#353939] "
+            className="font-[Tajawal] text-[60px] font-bold leading-[90px] tracking-[-0.025em] text-center"
             style={{ lineHeight: "80px" }}
           >
               اكتشف أحدث الأخبار والتطورات و كن جزءًا من التغيير!

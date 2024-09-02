@@ -15,9 +15,8 @@ const SectionTwo = () => {
     >
       <div className="w-[50%] px-[60px]">
         <p>حمل مجلة داعم!!</p>
-        <h1 className="font-tajawal text-[32px] text-[#353939] font-bold leading-[48px] tracking-[-0.02em] text-right my-1">
-          ابق علي اطلاع علي أحدث الأبحاث <br />
-          والتطورات في مجال الأورام
+        <h1 className="font-[Tajawal] text-[32px] text-[#353939] font-bold leading-[48px] tracking-[-0.02em] text-right my-1">
+          ابق على اطلاع على أحدث الأبحاث والتطورات في مجال الأورام
         </h1>
 
         <div>

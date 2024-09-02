@@ -5,8 +5,11 @@ import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 const HeroSection = () => {
   return (
     <div
-      className="h-[700px] relative flex items-center"
-      style={{ overflow: "hidden" }}
+      className="relative flex items-center"
+      style={{
+        height: "700px",
+        overflow: "hidden",
+      }}
     >
       <div
         style={{
@@ -14,12 +17,12 @@ const HeroSection = () => {
           top: "20%",
           left: "-18%",
         }}
-        className="w-[300px] h-[300px] bg-[#0f7d7f] gap-0 rounded-tl-[64px] transform rotate-[135deg] text-white flex items-center justify-center"
+        className="w-[300px] h-[300px] bg-[#0f7d7f] rounded-tl-[64px] transform rotate-[135deg] text-white flex items-center justify-center"
       ></div>
       <div>
         <Image
           src={img}
-          className="h-[450px] w-[520px]"
+          className="w-[520px] h-[450px]"
           style={{
             position: "absolute",
             top: "10%",
@@ -38,10 +41,10 @@ const HeroSection = () => {
           width: "450px",
         }}
       >
-        <h1 className="font text-3xl font-bold">
-          ندعم اليوم من أجل
-          <br /> مريض الغد.
+        <h1 className="text-[60px] font-bold leading-[90px] tracking-[-0.025em] text-right font-[Tajawal]">
+          ندعم اليوم من أجل مريض الغد.
         </h1>
+
         <p className="my-2">
           مرحباً بكم في جمعية داعم لأبحاث الأورام، معًا نحو مستقبل أفضل.
           <br /> نسعى لتحويل الألم إلى أمل من خلال العلم والبحث.
@@ -70,7 +73,7 @@ const HeroSection = () => {
           left: "90%",
           transform: "rotate(135deg) scaleX(-1)",
         }}
-        className="w-[300px] h-[300px] bg-[#0f7d7f] gap-0 rounded-tl-[64px] text-white flex items-center justify-center"
+        className="w-[300px] h-[300px] bg-[#0f7d7f] rounded-tl-[64px] text-white flex items-center justify-center"
       ></div>
       {/* Other content */}
     </div>

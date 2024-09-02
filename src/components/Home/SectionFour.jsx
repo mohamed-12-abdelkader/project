@@ -8,8 +8,8 @@ const SectionFour = () => {
         <video
           src="-f143-46d7-9ead-2443e45ba1e4.mp4"
           style={{
-            height: "500px",
-            width: "550px",
+            height: "445px",
+            width: "635px",
             margin: "50px 0px",
             borderRadius: "20px",
           }}
@@ -18,7 +18,7 @@ const SectionFour = () => {
           muted
           className="object-cover"
         />
-        <div className="w-[50%] p-[60px]">
+        <div className="w-[525px] p-[60px] mx-[50px]">
           <h1 className="text-xl font-bold text-[#353939] my-3">من نحن</h1>
           <p className="font-medium text-[#353939] my-2">نحو مستقبل حى مشرق </p>
           <p className="font-normal text-[#353939] my-2">

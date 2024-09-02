@@ -10,7 +10,7 @@ const MyGooals = () => {
       <div className="flex justify-between">
         <div className="w-[300px]">
           <div className="text-center">
-            <p className="font-medium my-3 text-[#353939]">
+            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
               تسهيل لوجستيات البحث
             </p>
           </div>
@@ -29,7 +29,7 @@ const MyGooals = () => {
         </div>
         <div className="w-[300px]">
           <div className="text-center">
-            <p className="font-medium my-3 text-[#353939]">
+            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
               تسهيل لوجستيات البحث
             </p>
           </div>
@@ -48,7 +48,7 @@ const MyGooals = () => {
         </div>
         <div className="w-[300px]">
           <div className="text-center">
-            <p className="font-medium my-3 text-[#353939]">
+            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
               تسهيل لوجستيات البحث
             </p>
           </div>

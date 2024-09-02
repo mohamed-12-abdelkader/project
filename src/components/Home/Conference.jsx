@@ -6,11 +6,11 @@ const Conference = () => {
   return (
     <div
       dir="rtl"
-      className="flex p-5 h-[500px] items-center"
+      className="flex p-5 h-[500px] items-center justify-between"
       style={{ marginTop: "50px" }}
     >
       <div className="w-[30%]">
-        <h1 className="text-xl font-bold text-[#353939] ">
+        <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-right">
           انضم إلى مؤتمراتنا واستكشف أحدث التطورات في مجال أبحاث الأورام
         </h1>
         <p className="text-[#5A6161] my-4">
@@ -24,7 +24,7 @@ const Conference = () => {
           عرض جميع المؤتمرات
         </button>
       </div>
-      <div className="w-[70%] h-[550px] ">
+      <div className="w-[60%] h-[550px] ">
         <Slider>
           <Card />
           <Card />

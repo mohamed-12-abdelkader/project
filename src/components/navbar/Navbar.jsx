@@ -8,7 +8,9 @@ const Navbar = () => {
       dir="rtl"
       className="w-[90%] m-auto h-[80px] shadow-lg bg-[#fff] rounded-full flex items-center justify-between px-6"
     >
-      <h1 className="text-xl font-bold text-[#11898C] mr-4">داعم</h1>
+      <Link href={"/"} className="no-underline">
+        <h1 className="text-xl font-bold text-[#11898C] mr-4">داعم</h1>
+      </Link>
       <div className="flex items-center space-x-4 space-x-reverse justify-between">
         <Link
           href="/"
