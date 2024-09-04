@@ -10,7 +10,7 @@ const Conference = () => {
       style={{ marginTop: "50px" }}
     >
       <div className="w-[30%]">
-        <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-right">
+        <h1 className="text-xl font-bold text-[#353939] ">
           انضم إلى مؤتمراتنا واستكشف أحدث التطورات في مجال أبحاث الأورام
         </h1>
         <p className="text-[#5A6161] my-4">

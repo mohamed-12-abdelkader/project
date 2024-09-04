@@ -18,7 +18,7 @@ const SectionFour = () => {
           muted
           className="object-cover"
         />
-        <div className="w-[525px] p-[60px] mx-[50px]">
+        <div className="w-[50%] p-[60px] mx-[60px]">
           <h1 className="text-xl font-bold text-[#353939] my-3">من نحن</h1>
           <p className="font-medium text-[#353939] my-2">نحو مستقبل حى مشرق </p>
           <p className="font-normal text-[#353939] my-2">

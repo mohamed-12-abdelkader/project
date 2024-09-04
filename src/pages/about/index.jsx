@@ -9,10 +9,8 @@ const index = () => {
     <div dir="rtl" className="mt-[100px]">
       <div className="text-center">
         <p className="text-[#11898C] ">تعرف علينا </p>
-        <h1 className="font-[Tajawal] text-[#11898C] text-[48px] font-bold leading-[72px] tracking-[-0.025em] text-center">
-          جمعية داعم
-        </h1>
-        <h1 className="font-[Tajawal] text-[#353939] text-[60px] font-bold leading-[90px] tracking-[-0.025em] text-center">
+        <h1 className="text-xl font-bold text-[#11898C] my-2">جمعية داعم</h1>
+        <h1 className="text-3xl font-bold text-[#353939] my-3">
           بالبحث، ننقذ الأرواح{" "}
         </h1>
         <div className="w-[50%] m-auto text-center my-2">
@@ -23,23 +21,23 @@ const index = () => {
           </p>
         </div>
       </div>
-      <div className="flex w-[95%] justify-center m-auto my-5">
-        <div>
+      <div className="flex w-[90%] m-auto my-5">
+        <div className="w-[50%]">
           <Image
             src={img}
-            className="h-[600px] w-[630px]"
+            className="h-[600px] w-[100%]"
             style={{ borderRadius: "10px" }}
           />
         </div>
-        <div className="mx-3">
+        <div className="mx-3 w-[50%]">
           <Image
             src={img}
-            className="   h-[290px] w-[520px]"
+            className="   h-[290px] w-[100%]"
             style={{ borderRadius: "10px" }}
           />
           <Image
             src={img}
-            className=" mt-[20px] h-[290px]  w-[520px]"
+            className=" mt-[20px] h-[290px]  w-[100%]"
             style={{ borderRadius: "10px" }}
           />
         </div>
@@ -60,7 +58,7 @@ const index = () => {
         </div>
       </div>
       {""}
-      <div className="flex my-[80px] w-[95%] m-auto">
+      <div className="flex my-[80px] w-[95%] justify-center m-auto">
         <div
           className="h-[250px] w-[400px] m-3 flex items-center justify-center"
           style={{
@@ -166,87 +164,99 @@ const index = () => {
           </button>
         </div>
         <div className="flex flex-wrap w-[95%] m-auto justify-center">
-          <div className="w-[300px] h-[300px] mx-4  my-2">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
-            </div>
-
-            <div className="text-center">
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>
-          <div className="w-[300px] h-[300px] mx-4 my-2">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
-            </div>
-
-            <div className="text-center">
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>
-          <div className="w-[300px] h-[300px] mx-4  my-2">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
-            </div>
-
-            <div className="text-center">
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>
-          <div className="w-[300px] h-[300px]  my-2 mx-4">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
-            </div>
-
-            <div className="text-center">
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>
-          <div className="w-[300px] h-[300px]  my-2 mx-4">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
-            </div>
-
-            <div className="text-center">
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>
-          <div className="w-[300px] h-[300px]  my-2 mx-4">
-            <div className="h-[220px] bg-[#D7DADA]">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
-            <div className="text-center my-2 w-[300px] flex justify-center">
-              <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right text-[#353939] my-2">
-                سعود صالح عبدالكريم الصواب
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
               </h1>
+              <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-
-            <div className="text-center">
+          </div>
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
+              <Image src={img2} className="h-[100%] " />
+            </div>
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
+              </h1>
+              <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
+            </div>
+          </div>
+          <div className="w-[280px] h-[300px] my-3 mx-2">
+            <div className="h-[210px] bg-[#D7DADA]">
+              <Image src={img2} className="h-[100%] " />
+            </div>
+            <div className="text-center my-2">
+              <h1 className="text-xl font-bold text-[#353939] my-2">
+                {" "}
+                سعود صالح عبدالكريم الصواب{" "}
+              </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
           </div>

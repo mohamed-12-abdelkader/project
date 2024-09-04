@@ -1,8 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { GoArrowUpLeft } from "react-icons/go";
-import { FaBookOpen } from "react-icons/fa";
-import { GiDna2 } from "react-icons/gi";
+import { FaBookOpen } from "react-icons/fa6";
 const MyGooals = () => {
   return (
     <div dir="rtl" className="h-[400px] my-5 bg-[#E7F3F4]">
@@ -12,10 +11,10 @@ const MyGooals = () => {
       <div className="flex justify-between">
         <div className="w-[300px]">
           <div className="text-center">
-            <div className="flex justify-center my-3">
-              <FaBookOpen className="text-[#0f7d7f] text-3xl" />
+            <div className="flex justify-center">
+              <FaBookOpen />
             </div>
-            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
+            <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
             </p>
           </div>
@@ -34,10 +33,7 @@ const MyGooals = () => {
         </div>
         <div className="w-[300px]">
           <div className="text-center">
-            <div className="flex justify-center my-3">
-              <FaBookOpen className="text-[#0f7d7f] text-3xl" />
-            </div>
-            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
+            <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
             </p>
           </div>
@@ -56,10 +52,7 @@ const MyGooals = () => {
         </div>
         <div className="w-[300px]">
           <div className="text-center">
-            <div className="flex justify-center my-3">
-              <GiDna2 className="text-[#0f7d7f] text-3xl" />
-            </div>
-            <p className="font-[Tajawal] text-[16px] font-semibold leading-[24px] text-center text-[#353939] my-3">
+            <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
             </p>
           </div>

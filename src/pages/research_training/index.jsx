@@ -7,7 +7,7 @@ const index = () => {
         <p className=" text-[#11898C]"> التدريب البحثى </p>
         <div className="w-[40%] m-auto text-center">
           <h1
-            className="font-[Tajawal] text-[#353939] text-[60px] font-bold leading-[90px] tracking-[-0.025em] text-center"
+            className="text-[60px]  font-extrabold text-[#353939] my-2"
             style={{ lineHeight: "90px" }}
           >
             عزز مهاراتك البحثية معنا
@@ -25,7 +25,7 @@ const index = () => {
       <div className="h-[100px]"></div>
       <div className="my-[8] ">
         <div className="w-[60%] m-auto text-center">
-          <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-center">
+          <h1 className="text-xl font-bold my-3">
             اختر الطريق الذي يناسبك لتعزيز مهاراتك البحثية
           </h1>
           <p className="text-[#5A6161]">

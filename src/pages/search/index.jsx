@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import img from "../../images/b38db4bc8369719a07ab74d4fec71cef.png";
 import Image from "next/image";
 import Pagnation from "@/components/pagination/Pagination";
-import { GoChevronDown } from "react-icons/go";
+import { Dropdown } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 const index = () => {
   const [page, setPage] = useState(1);
   const [inputValue, setInputValue] = useState("");
@@ -26,7 +27,7 @@ const index = () => {
       <div className="text-center ">
         <p className=" text-[#11898C]">ابحاثنا </p>
         <h1
-          className="font-[Tajawal] text-[60px] text-[#5A6161] font-bold leading-[90px] tracking-[-0.025em] text-center"
+          className="text-[60px]  font-extrabold text-[#353939] my-2"
           style={{ lineHeight: "90px" }}
         >
           بحثنا المستمر يُحدث الفرق
@@ -41,7 +42,7 @@ const index = () => {
       </div>
       {""}
       <div className="mt-[120px] text-center">
-        <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-center">
+        <h1 className="text-[#353939] text-xl font-bold my-3 ">
           اكتشف أخر أبحاثنا
         </h1>
         <p className="text-[#353939]">ابحث عن الأبحاث والمقالات حسب الفئة</p>
@@ -52,14 +53,13 @@ const index = () => {
           style={{ paddingRight: "3rem" }}
           value={inputValue}
           onChange={handleInputChange}
+          placeholder="بحث..."
         />
         <button
-          className="absolute flex top-1/2 right-4 transform -translate-y-1/2 p-2 h-[50px] text-[#11898C]  "
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 p-2  text-[#11898C] bg-white border border-[#11898C]"
           onClick={handleSearchClick}
-          style={{ borderLeft: "solid 1px #11898C" }}
         >
           قائمة البحث
-          <GoChevronDown className="my-1 mx-2" />
         </button>
         {showMenu && (
           <ul
@@ -97,7 +97,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -121,7 +121,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -145,7 +145,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -169,7 +169,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -193,7 +193,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -217,7 +217,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -241,7 +241,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -257,7 +257,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
+        <div className="h-[500px] w-[400px] my-4 m-2">
           <Image
             src={img}
             className="h-[280px] w-[400px]"
@@ -265,7 +265,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -281,7 +281,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
+        <div className="h-[500px] w-[400px] m-2 my-4">
           <Image
             src={img}
             className="h-[280px] w-[400px]"
@@ -289,7 +289,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -305,7 +305,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
+        <div className="h-[500px] w-[400px] m-2 my-4">
           <Image
             src={img}
             className="h-[280px] w-[400px]"
@@ -313,7 +313,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -329,7 +329,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
+        <div className="h-[500px] w-[400px] m-2 my-4">
           <Image
             src={img}
             className="h-[280px] w-[400px]"
@@ -337,7 +337,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">
@@ -353,7 +353,7 @@ const index = () => {
             </button>
           </div>
         </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
+        <div className="h-[500px] w-[400px] m-2 my-4">
           <Image
             src={img}
             className="h-[280px] w-[400px]"
@@ -361,79 +361,7 @@ const index = () => {
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
-            </h1>
-            <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
-              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
-            </p>
-            <button
-              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              اقرا المزيد
-            </button>
-          </div>
-        </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
-          <Image
-            src={img}
-            className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="my-2">
-            <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
-            </h1>
-            <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
-              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
-            </p>
-            <button
-              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              اقرا المزيد
-            </button>
-          </div>
-        </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
-          <Image
-            src={img}
-            className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="my-2">
-            <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
-            </h1>
-            <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
-              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
-            </p>
-            <button
-              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              اقرا المزيد
-            </button>
-          </div>
-        </div>
-        <div className="h-[500px] my-4 w-[400px] m-2">
-          <Image
-            src={img}
-            className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="my-2">
-            <p>1 محرم 1446</p>
-            <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
               "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
             </h1>
             <p className="text-[#353939]">

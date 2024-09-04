@@ -3,9 +3,9 @@ import img from "../../images/89c2be04dfa7a7ab14423059955b4586.png";
 import Image from "next/image";
 const Events = () => {
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[50px]">
       <div className="text-center">
-        <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-center">
+        <h1 className="text-xl font-bold text-[#353939]">
           ابقَ على اطلاع على فعالياتنا و مبادراتنا
         </h1>
         <div className="w-[70%] text-center m-auto my-3">

@@ -11,7 +11,7 @@ const index = () => {
         <p className=" text-[#11898C]">اتصل بنا </p>
         <div className="w-[40%] m-auto text-center">
           <h1
-            className="font-[Tajawal] text-[60px] font-bold leading-[90px] tracking-[-0.025em] text-center"
+            className="text-[60px]  font-extrabold text-[#353939] my-2"
             style={{ lineHeight: "90px" }}
           >
             هل لديك أي استفسارات؟ تواصل معنا الآن!
@@ -78,7 +78,7 @@ const index = () => {
         <p> إذا كنت تفضل الاتصال بنا مباشرة، إليك معلومات الاتصال الخاصة بنا</p>
       </div>
       {""}
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         <div
           className="h-[250px] w-[410px] shadow border text-center py-5 m-2"
           style={{ borderRadius: "10px" }}

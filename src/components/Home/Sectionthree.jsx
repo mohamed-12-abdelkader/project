@@ -9,10 +9,9 @@ const Sectionthree = () => {
   return (
     <div className="my-5 p-5 mt-[50px]">
       <div className="text-center">
-        <h1 className="font-[Tajawal] text-[28px] font-bold leading-[42px] tracking-[-0.02em] text-center text-[#353939]">
-          اكتشف أحدث أبحاثنا في مجال الأورام
+        <h1 className="font-bold text-xl text-[#353939]">
+          اكتشف أحدث ابحاثنا في مجال الأورام
         </h1>
-
         <p className="my-2 text-[#353939] font-normal">
           اطلع على أحدث ابحاث جمعية داعم في الأورام، وتعرف على كيفية تحقيق تقدم
           ملموس في <br />
@@ -20,12 +19,15 @@ const Sectionthree = () => {
         </p>
       </div>
 
-      <Slider>
-        {[...Array(8)].map((_, index) => (
-          <Card key={index} />
-        ))}
-      </Slider>
-      <div className="mt-3 flex justify-center">
+      <div className="w-[95%] mx-auto">
+        <Slider>
+          {[...Array(8)].map((_, index) => (
+            <Card key={index} />
+          ))}
+        </Slider>
+      </div>
+
+      <div className="text-center">
         <Link href="/search">
           <button
             className="m-2 h-[35px] w-[200px] text-[#0f7d7f]"
