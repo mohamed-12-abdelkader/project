@@ -56,7 +56,8 @@ const Slider = ({ title, children }) => {
   return (
     <div dir="rtl" className="slider my-[20px] relative">
       <div
-        className="slider-container overflow-x-auto whitespace-nowrap py-5"
+        className="slider-container overflow-x-auto whitespace-nowrap py-5 "
+        style={{position:"relative"}}
         ref={sliderRef}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -69,11 +70,12 @@ const Slider = ({ title, children }) => {
         {children}
       </div>
       <button
-        className="slide-btn prev bg-[#ad7c3c] h-[50px] w-[50px] flex justify-center items-center absolute top-1/2 left-0 transform -translate-y-1/2"
+      
+        className="slide-btn prev bg-[#ad7c3c] h-[50px] w-[50px] flex justify-center items-center absolute top-1/2 left-[-10%] transform -translate-y-1/2"
         onClick={() =>
           (sliderRef.current.scrollLeft -= sliderRef.current.offsetWidth)
         }
-        style={{ borderRadius: "50%" }}
+        style={{ borderRadius: "50%",position:"absolute", left:"-2%" }}
       >
         <GoArrowLeft className="text-2xl text-white" />
       </button>
@@ -82,7 +84,9 @@ const Slider = ({ title, children }) => {
         onClick={() =>
           (sliderRef.current.scrollLeft += sliderRef.current.offsetWidth)
         }
-        style={{ borderRadius: "50%" }}
+        style={{ borderRadius: "50%",position:"absolute",
+          right:"-1.5%"
+         }}
       >
         <GoArrowRight className="text-2xl text-white" />
       </button>

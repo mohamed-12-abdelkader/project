@@ -9,7 +9,7 @@ const Card = () => {
       className="inline-block  mx-2 border "
       style={{
         flexShrink: 0,
-        width: "300PX",
+        width: "320PX",
         boxShadow: `
                0px 9px 21px 0px #11898C0A,
           0px 38px 38px 0px #11898C08,
@@ -29,7 +29,7 @@ const Card = () => {
       </div>
       <div className="p-2">
         <p className="font-normal text-[#353939]">1 محرم 1446</p>
-        <h1 className="font-[Tajawal] text-[20px] font-bold leading-[30px] tracking-[-0.015em] text-right">
+        <h1 className="text-xl font-bold text-[#353939]">
           العلاج بالخلايا الجذعية: <br />
           أفق جديد لعلاج الأورام
         </h1>

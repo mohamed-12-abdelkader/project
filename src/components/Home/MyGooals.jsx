@@ -12,7 +12,7 @@ const MyGooals = () => {
         <div className="w-[300px]">
           <div className="text-center">
             <div className="flex justify-center">
-              <FaBookOpen />
+              <FaBookOpen/>
             </div>
             <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث

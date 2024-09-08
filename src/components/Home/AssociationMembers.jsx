@@ -40,14 +40,13 @@ const AssociationMembers = () => {
       <div className="w-[92%] mx-auto">
         <Slider>
           {[...Array(8)].map((_, index) => (
-            <div
-              key={index}
+              <div
               dir="rtl"
               className="inline-block  mx-2  "
               style={{
                 flexShrink: 0,
                 width: "330PX",
-
+              
                 borderRadius: "10px",
               }}
             >
@@ -59,17 +58,15 @@ const AssociationMembers = () => {
                 />
               </div>
               <div className="p-2">
-                <div className="text-center my-2">
-                  <h1 className="text-xl font-bold text-[#353939] my-2">
-                    {" "}
-                    سعود صالح عبدالكريم الصواب{" "}
-                  </h1>
-                  <p className="text-[#353939] font-normal">
-                    {" "}
-                    رئيس مجلس الادارة{" "}
-                  </p>
-                </div>
+              <div className="text-center my-2">
+            <h1 className="text-xl font-bold text-[#353939] my-2">
+              {" "}
+              سعود صالح عبدالكريم الصواب{" "}
+            </h1>
+            <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
+          </div>
               </div>
+             
             </div>
           ))}
         </Slider>

@@ -164,7 +164,7 @@ const index = () => {
           </button>
         </div>
         <div className="flex flex-wrap w-[95%] m-auto justify-center">
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -175,8 +175,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -187,8 +188,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -199,8 +201,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -211,8 +214,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -223,8 +227,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -235,8 +240,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -247,8 +253,9 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
-          <div className="w-[280px] h-[300px] my-3 mx-2">
+        <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " />
             </div>
@@ -259,6 +266,7 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
+      
           </div>
         </div>
       </div>

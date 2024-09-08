@@ -42,22 +42,24 @@ const SectionTwo = () => {
           </button>
         </div>
       </div>
-      <div className="relative flex items-center justify-center mx-[150px]">
-        <div
-          className="w-[300.42px] h-[400.48px] gap-0 rounded-tl-[30px] transform rotate-[125deg] bg-[#B5DADB] border absolute"
-          style={{
-            borderRadius: "20px",
-            top: "52%",
-            zIndex: "1000",
-            left: "15%",
-          }}
-        ></div>
-        <Image
-          src={img}
-          className="h-[540px] w-[650px] relative z-[1010]"
-          alt="Centered Image"
-        />
-      </div>
+      <div className="relative flex items-center justify-center mx-[0px]">
+  <div
+    className="w-[350.42px] h-[450.48px] gap-0 rounded-tl-[30px] transform rotate-[125deg] bg-[#B5DADB] border absolute"
+    style={{
+      borderRadius: "20px",
+      top: "42%",
+      zIndex: "1000",
+      left: "20%",
+    }}
+  ></div>
+  <Image
+    src={img}
+   
+    className="h-[540px] w-[650px] relative z-[1010]"
+    alt="Centered Image"
+  />
+</div>
+
     </div>
   );
 };
