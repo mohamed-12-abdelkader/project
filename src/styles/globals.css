@@ -31,10 +31,69 @@ a {
   position: relative;
 }
 
+/* For news carousel */
+.news-cards-splide .splide__slide {
+  transition: transform 0.4s ease;
+  transition: width 0.4s ease, height 0.4s ease;
+  width: 502px;
+}
+.news-cards-splide {
+  /* Must set fixed height here to prevent layout shift for arrows buttons */
+  min-height: 590px;
+}
+.news-cards-splide .splide__slide .card-desc {
+  transition: opacity 0.5s ease;
+  position: absolute;
+  inset: 0;
+  padding: 8px;
+  justify-content: center;
+  align-items: flex-end;
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.3);;
+}
+.news-cards-splide .splide__slide .card-desc p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 64px;
+  color: white;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -1.5%;
+  max-width: 520px;
+}
+
+.news-cards-splide .splide__slide.is-active .card-desc {
+  display: flex;
+  opacity: 1;
+}
+.news-cards-splide .splide__slide.is-active {
+  /* Width in design is 636 */
+  width: 590px !important;
+  height: min-content;
+}
+.news-cards-splide .splide__slide:not(.is-active):hover {
+  transform: scale(1.01);
+}
+.news-cards-splide .splide__list {
+  display: flex;
+  align-items: center;
+}
+
+/* If decide to remove component/slider/Slider so no needed for this select, you can remove it! */
 .slide-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: #11898c;
+  z-index: 10;
+}
+
+.slide-btn-theme {
+  position: absolute;
   background: none;
   border: none;
   cursor: pointer;

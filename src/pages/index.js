@@ -9,7 +9,7 @@ import MyGooals from "@/components/Home/MyGooals";
 import AssociationMembers from "@/components/Home/AssociationMembers";
 import Conference from "@/components/Home/Conference";
 import Events from "@/components/Home/Events";
-import Card from "@/ui/card/Card";
+import Card from "@/ui/card/ConferenceCard";
 import News from "@/components/Home/News";
 import PartnersSuccess from "@/components/Home/PartnersSuccess";
 import Footer from "@/components/footer/Footer";
