@@ -3,7 +3,7 @@ import img from "../../images/89c2be04dfa7a7ab14423059955b4586.png";
 import Image from "next/image";
 const Events = () => {
   return (
-    <div className="mt-[50px]">
+    <div className="app-container mt-[50px]">
       <div className="text-center">
         <h1 className="text-xl font-bold text-[#353939]">
           ابقَ على اطلاع على فعالياتنا و مبادراتنا
@@ -27,6 +27,7 @@ const Events = () => {
           src={img}
           className="w-[95%] m-auto h-[500px]"
           style={{ borderRadius: "20px" }}
+          alt=""
         />
       </div>
     </div>

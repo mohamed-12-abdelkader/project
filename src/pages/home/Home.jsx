@@ -14,7 +14,7 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div className="">
+    <div>
       <HeroSection />
       <SectionTwo />
       <Sectionthree />

@@ -1,27 +1,14 @@
-import React, { useRef } from "react";
-import Image from "next/image";
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
-import CarouselArrows from "@/ui/CarouselArrows";
+import React from "react";
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Card from "@/ui/card/NewsCard";
 
 // Mock data
-const newsCards = new Array(7).fill({ imageUrl: img, title: "جمعية داعم تستضيف ورشة عمل متقدمة حول احدث تقنيات الابحاث في مجال السرطان الورشة ستتناول تقنيات ال CRA T-CEII الجديدة في علاج السرطانز" })
-const centerCardIndex = 3
+const newsCards = new Array(3).fill({ imageUrl: "/news.jpeg", title: "جمعية داعم تستضيف ورشة عمل متقدمة حول أحدث تقنيات الأبحاث في مجال السرطان. الورشة ستتناول تقنيات  ال CAR-T-CEll الجديدة في  علاج السرطان." })
 
 const News = () => {
-  const splideRef = useRef(null);
-
-  const handlePrevClick = () => {
-    splideRef.current?.splide.go("<");
-  };
-
-  const handleNextClick = () => {
-    splideRef.current?.splide.go(">");
-  };
-
   return (
-    <div className="mt-[50px] h-[500px]">
+    <div className="mt-[120px] h-[500px]">
       <div className="text-center">
         <h1 className="text-xl font-bold text-[#353939]">
           أحدث الأخبار والتحديثات
@@ -30,37 +17,74 @@ const News = () => {
           ابقَ على اطلاع على آخر أخبار و مستجدات الجمعية
         </p>
       </div>
-      <div className="w-full relative">
+      <div className="w-full mt-[32px] relative select-none">
         <Splide
+          hasTrack={false}
           className="news-cards-splide" // Ability to select specific carousel without conflict.
-          ref={splideRef}
           options={{
             pagination: false,
-            fixedWidth: "502px", // not focus card
-            perMove: 1,
-            arrows: false,
-            start:centerCardIndex,
+            // fixedWidth: "502px", // Not focus card
+            autoWidth: true,
+            autoHeight: true,
+            start: 0,
+            classes: {
+              arrows: 'splide__arrows news-arrows',
+              arrow: 'splide__arrow news-arrow',
+              prev: 'splide__arrow--prev news-prev',
+              next: 'splide__arrow--next news-next',
+              pagination: 'splide__pagination news-pagination',
+            },
+            focus: "center",
+            omitEnd: true,
             drag: false,
-            speed: 400,
             updateOnMove: true,
             isNavigation: true,
+            slideFocus: true,
             trimSpace: false,
             rewind: false,
-            focus: "center",
             gap: '24px',
             direction: "rtl",
             breakpoints: {
               // talwind sm breakpoint, max-width 460px
               640: {
-                fixedWidth: "100%",
+                arrows: false,
+                drag: true,
+                isNavigation: false,
+                pagination: true,
               },
             }
           }}
+          // when splide init, css styles increase a card size, that trigger shifting on the slider, but when move to any dir every thing be ok.
+          // there other solution, by add fixedWidth option with a centred card width.
+          onMounted={(e) => {
+            e.go(">")
+          }}
           aria-labelledby="news-cards-carousel"
         >
-          {newsCards.map((card, i) => <SplideSlide key={i}><Card imageUrl={card.imageUrl} title={card.title} /></SplideSlide>)}
+          <SplideTrack>
+            {newsCards.map((card, i) => <SplideSlide key={i}><Card imageUrl={card.imageUrl} title={card.title} /></SplideSlide>)}
+          </SplideTrack>
+          <div className="splide__arrows news-arrows">
+            <button
+              className="splide__arrow news-arrow news-next splide__arrow--next slide-btn-theme left-[10px] lg:left-[105px]  top-[225px]"
+            >
+              <GoArrowLeft className="text-2xl text-white" />
+            </button>
+            <button
+              className="splide__arrow news-arrow news-prev splide__arrow--prev slide-btn-theme right-[10px] lg:right-[105px] top-[225px]"
+            >
+              <GoArrowRight className="text-2xl text-white" />
+            </button>
+          </div>
         </Splide>
-        <CarouselArrows left="50px" right="50px" topPresent="57.5%" nextClick={handleNextClick} prevClick={handlePrevClick} />
+      </div>
+      <div className="text-center mt-16 sm:mt-5">
+        <button
+          className="m-2 h-[35px] w-[150px] text-[#0f7d7f]"
+          style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+        >
+          اكتشف المزيد
+        </button>
       </div>
     </div>
   );

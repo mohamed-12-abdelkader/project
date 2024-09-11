@@ -3,8 +3,7 @@ import React from "react";
 
 const SectionFour = () => {
   return (
-    <div dir="rtl">
-      <div className="flex w-[90%] m-auto items-center">
+      <div className="app-container flex gap-[30px] items-center justify-between" dir="rtl">
         <video
           src="-f143-46d7-9ead-2443e45ba1e4.mp4"
           style={{
@@ -18,7 +17,7 @@ const SectionFour = () => {
           muted
           className="object-cover"
         />
-        <div className="w-[50%] p-[60px] mx-[60px]">
+        <div className="max-w-[525px]">
           <h1 className="text-xl font-bold text-[#353939] my-3">من نحن</h1>
           <p className="font-medium text-[#353939] my-2">نحو مستقبل حى مشرق </p>
           <p className="font-normal text-[#353939] my-2">
@@ -52,7 +51,6 @@ const SectionFour = () => {
           </Link>
         </div>
       </div>
-    </div>
   );
 };
 
