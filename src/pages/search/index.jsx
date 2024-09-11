@@ -1,10 +1,14 @@
+"use client";
+
 import React, { useState } from "react";
 import img from "../../images/b38db4bc8369719a07ab74d4fec71cef.png";
 import Image from "next/image";
 import Pagnation from "@/components/pagination/Pagination";
 import { Dropdown } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
-const index = () => {
+
+
+const Index = () => {
   const [page, setPage] = useState(1);
   const [inputValue, setInputValue] = useState("");
 
@@ -34,9 +38,9 @@ const index = () => {
         </h1>
         <div className="w-[60%] m-auto text-center">
           <p className="text-[#5A6161]">
-            "جمعية داعم لأبحاث الأورام تفخر بدعم الأبحاث المبتكرة التي تهدف إلى
+            &quot;جمعية داعم لأبحاث الأورام تفخر بدعم الأبحاث المبتكرة التي تهدف إلى
             مكافحة السرطان وإنقاذ الأرواح. اكتشف كيف تساهم أبحاثنا في تحقيق تقدم
-            ملموس في هذا المجال الحيوي."
+            ملموس في هذا المجال الحيوي.&quot;
           </p>
         </div>
       </div>
@@ -93,17 +97,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -117,17 +121,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -141,17 +145,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -165,17 +169,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -189,17 +193,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -213,17 +217,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -237,17 +241,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -261,17 +265,65 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
+            </p>
+            <button
+              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
+              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+            >
+              اقرا المزيد
+            </button>
+          </div>
+        </div>
+        <div className="h-[500px] w-[400px] m-2 my-4">
+          <Image
+            src={img}
+            className="h-[280px] w-[400px]"
+            style={{ borderRadius: "20px" }} alt={img}
+          />
+          <div className="my-2">
+            <p>1 محرم 1446</p>
+            <h1 className="text-xl font-bold text-[#353939] my-2">
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
+            </h1>
+            <p className="text-[#353939]">
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
+              المرضى حول العالم.&quot;
+            </p>
+            <button
+              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
+              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+            >
+              اقرا المزيد
+            </button>
+          </div>
+        </div>
+        <div className="h-[500px] w-[400px] m-2 my-4">
+          <Image
+            src={img}
+            className="h-[280px] w-[400px]"
+            style={{ borderRadius: "20px" }} alt={img}
+          />
+          <div className="my-2">
+            <p>1 محرم 1446</p>
+            <h1 className="text-xl font-bold text-[#353939] my-2">
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
+            </h1>
+            <p className="text-[#353939]">
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -286,16 +338,17 @@ const index = () => {
             src={img}
             className="h-[280px] w-[400px]"
             style={{ borderRadius: "20px" }}
+            alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -309,65 +362,17 @@ const index = () => {
           <Image
             src={img}
             className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
+            style={{ borderRadius: "20px" }} alt={img}
           />
           <div className="my-2">
             <p>1 محرم 1446</p>
             <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
+              &quot;العلاج المناعي: الأمل الجديد في مكافحة السرطان&quot;
             </h1>
             <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
+              &quot;العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
               السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
-            </p>
-            <button
-              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              اقرا المزيد
-            </button>
-          </div>
-        </div>
-        <div className="h-[500px] w-[400px] m-2 my-4">
-          <Image
-            src={img}
-            className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="my-2">
-            <p>1 محرم 1446</p>
-            <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
-            </h1>
-            <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
-              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
-            </p>
-            <button
-              className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              اقرا المزيد
-            </button>
-          </div>
-        </div>
-        <div className="h-[500px] w-[400px] m-2 my-4">
-          <Image
-            src={img}
-            className="h-[280px] w-[400px]"
-            style={{ borderRadius: "20px" }}
-          />
-          <div className="my-2">
-            <p>1 محرم 1446</p>
-            <h1 className="text-xl font-bold text-[#353939] my-2">
-              "العلاج المناعي: الأمل الجديد في مكافحة السرطان"
-            </h1>
-            <p className="text-[#353939]">
-              "العلاج المناعي يمثل ثورة في مجال الطب، يفتح آفاقًا جديدة لعلاج
-              السرطان بطرق طبيعية وفعّالة، مما يمكن أن يغير حياة الملايين من
-              المرضى حول العالم."
+              المرضى حول العالم.&quot;
             </p>
             <button
               className="my-2 h-[35px] w-[400px] text-[#0f7d7f]"
@@ -389,4 +394,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

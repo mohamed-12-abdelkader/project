@@ -1,6 +1,13 @@
-import Card from "@/ui/card/Card";
 import React from "react";
+import Card from "@/ui/card/ConferenceCard";
+import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 
+const data = [
+  { title: "الوراثة الجزيئية وعلاج السرطان", url: "#", imageUrl: img, date: "1 محرم 1446" },
+  { title: "الوراثة الجزيئية وعلاج السرطان", url: "#", imageUrl: img, date: "1 محرم 1446" },
+  { title: "تطبيقات الذكاء الاصطناعي في أبحاث السرطان", url: "#", imageUrl: img, date: "1 محرم 1446" },
+  { title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام", url: "#", imageUrl: img, date: "1 محرم 1446" },
+]
 const index = () => {
   return (
     <div dir="rtl " className="mt-[100px]">
@@ -29,10 +36,7 @@ const index = () => {
         <p>سجل الأن في الفعاليات القادمة و كن جزء من التغيير</p>
       </div>
       <div className="flex justify-center">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.map((card, i) => <Card key={i} card={card} />)}
       </div>
       <div className="h-[100px]"></div>
     </div>

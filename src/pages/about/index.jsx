@@ -15,9 +15,9 @@ const index = () => {
         </h1>
         <div className="w-[50%] m-auto text-center my-2">
           <p className="text-[#353939] ">
-            "جمعية داعم لأبحاث الأورام تكرس جهودها لتحقيق تقدم ملموس في مكافحة
+            &quot;جمعية داعم لأبحاث الأورام تكرس جهودها لتحقيق تقدم ملموس في مكافحة
             السرطان وإنقاذ حياة المرضى من خلال دعم الأبحاث العلمية والابتكارات
-            الطبية."
+            الطبية.&quot;
           </p>
         </div>
       </div>
@@ -27,18 +27,21 @@ const index = () => {
             src={img}
             className="h-[600px] w-[100%]"
             style={{ borderRadius: "10px" }}
-          />
+            alt={img}
+            />
         </div>
         <div className="mx-3 w-[50%]">
           <Image
             src={img}
             className="   h-[290px] w-[100%]"
             style={{ borderRadius: "10px" }}
-          />
+            alt={img}
+            />
           <Image
             src={img}
             className=" mt-[20px] h-[290px]  w-[100%]"
             style={{ borderRadius: "10px" }}
+            alt={img}
           />
         </div>
       </div>
@@ -166,7 +169,7 @@ const index = () => {
         <div className="flex flex-wrap w-[95%] m-auto justify-center">
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -179,7 +182,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -192,7 +195,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -205,7 +208,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -218,7 +221,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -231,7 +234,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -244,7 +247,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -257,7 +260,7 @@ const index = () => {
           </div>
         <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
-              <Image src={img2} className="h-[100%] " />
+              <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
             <div className="text-center my-2">
               <h1 className="text-xl font-bold text-[#353939] my-2">
@@ -306,6 +309,7 @@ const index = () => {
             src={img3}
             className="h-[660px] w-[680px]"
             style={{ borderRadius: "20px" }}
+            alt={img2}
           />
         </div>
       </div>
@@ -317,6 +321,7 @@ const index = () => {
             src={img3}
             className="h-[660px] w-[680px]"
             style={{ borderRadius: "20px" }}
+            alt={img2}
           />
           <div className="mx-[50px]">
             <h1 className="text-xl font-bold text-[#353939] my-5">
@@ -349,10 +354,10 @@ const index = () => {
             </h1>
             <div className="w-[350px] ">
               <p className="text-[#353939]">
-                "نؤمن بأن التغيير الحقيقي يبدأ من المشاركة المجتمعية الفعالة
+                &quot;نؤمن بأن التغيير الحقيقي يبدأ من المشاركة المجتمعية الفعالة
                 ونشر المعرفة. من خلال مؤتمراتنا وفعالياتنا، نجمع بين الباحثين
                 والخبراء والمجتمع لمناقشة أحدث التطورات في مجال أبحاث الأورام
-                والعمل معًا لتحقيق مستقبل أفضل."{" "}
+                والعمل معًا لتحقيق مستقبل أفضل.&quot;{" "}
               </p>
               <div className="flex my-5">
                 <button
@@ -374,6 +379,7 @@ const index = () => {
             src={img3}
             className="h-[660px] w-[680px]"
             style={{ borderRadius: "20px" }}
+            alt={img2}
           />
         </div>
       </div>
