@@ -1,9 +1,12 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { GoChevronDown } from "react-icons/go";
+import logo from "../../images/Logo.png";
+import Image from "next/image";
+
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [dropdownAnchorEl, setDropdownAnchorEl] = useState(null);
@@ -33,78 +36,80 @@ const Navbar = () => {
         dir="rtl"
         className="h-[80px] shadow-lg bg-[#fff] rounded-full flex items-center justify-between px-6"
       >
-        <h1 className="text-xl font-bold text-[#11898C] mr-4">داعم</h1>
+        <Image src={logo} className="h-[60px] w-[140px]" alt="logo"/>
         <div className="flex items-center space-x-4 space-x-reverse justify-between">
           <Link
             href="/"
-            className="text-[black] hover:text-[#11898C] no-underline"
+            className="text-[#11898C] gap-[8px] p-[8px] mx-2 hover:text-[#11898C] no-underline font-tajawal text-[16px] font-normal leading-[24px] text-left"
           >
             الرئيسية
           </Link>
 
-          <Button
+          <div
             id="about-button"
-            aria-controls={currentDropdown === 'about' ? 'basic-menu' : undefined}
+            aria-controls={currentDropdown === "about" ? "basic-menu" : undefined}
             aria-haspopup="true"
-            aria-expanded={currentDropdown === 'about' ? 'true' : undefined}
-            onClick={(e) => handleDropdownClick(e, 'about')}
-            className="flex text-black"
+            aria-expanded={currentDropdown === "about" ? "true" : undefined}
+            onClick={(e) => handleDropdownClick(e, "about")}
+            className="flex text-black gap-[8px] p-[8px] mx-2"
           >
             تعرف علينا
-
             <GoChevronDown className="m-1 text-xl" />
-          </Button>
+          </div>
           <Menu
             id="about-menu"
             anchorEl={dropdownAnchorEl}
-            open={currentDropdown === 'about'}
+            open={currentDropdown === "about"}
             onClose={handleClose}
             MenuListProps={{
-              'aria-labelledby': 'about-button',
+              "aria-labelledby": "about-button",
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Link href="/about" className="no-underline text-black">
+              <Link
+                href="/about"
+                className="no-underline text-black font-tajawal text-[16px] font-normal leading-[24px] text-left"
+              >
                 تعريف الجمعية
-
               </Link>
             </MenuItem>
-            <MenuItem onClick={handleClose}>
-              اعضاء الجمعية
-
-
-            </MenuItem>
+            <MenuItem onClick={handleClose}>اعضاء الجمعية</MenuItem>
           </Menu>
 
           <Link
             href="/search"
-            className="text-[black] hover:text-[#11898C] no-underline"
+            className="text-black mx-2 gap-[8px] p-[8px]  hover:text-[#11898C] no-underline font-tajawal text-[16px] font-normal leading-[24px] text-left"
           >
             الابحاث
           </Link>
 
-          <Button
+          <div
             id="events-button"
-            aria-controls={currentDropdown === 'events' ? 'events-menu' : undefined}
+            aria-controls={
+              currentDropdown === "events" ? "events-menu" : undefined
+            }
             aria-haspopup="true"
-            aria-expanded={currentDropdown === 'events' ? 'true' : undefined}
-            onClick={(e) => handleDropdownClick(e, 'events')}
-            className="flex text-black"
+            aria-expanded={currentDropdown === "events" ? "true" : undefined}
+            onClick={(e) => handleDropdownClick(e, "events")}
+            className="flex text-black gap-[8px] p-[8px] mx-2"
           >
             الفعاليات والمؤتمرات
             <GoChevronDown className="m-1 text-xl" />
-          </Button>
+          </div>
           <Menu
             id="events-menu"
             anchorEl={dropdownAnchorEl}
-            open={currentDropdown === 'events'}
+            open={currentDropdown === "events"}
             onClose={handleClose}
             MenuListProps={{
-              'aria-labelledby': 'events-button',
+              "aria-labelledby": "events-button",
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Link href="/events" className="no-underline text-black">
+              <Link
+                href="/events"
+                className="no-underline gap-[8px] p-[8px] text-black font-tajawal text-[16px] font-normal leading-[24px] text-left"
+              >
                 الفعاليات
               </Link>
             </MenuItem>
@@ -113,34 +118,40 @@ const Navbar = () => {
 
           <Link
             href="/news"
-            className="text-[black] hover:text-[#11898C] no-underline"
+            className="text-black mx-2 gap-[8px] p-[8px] hover:text-[#11898C] no-underline font-tajawal text-[16px] font-normal leading-[24px] text-left"
           >
             الاخبار
           </Link>
 
-          <Button
+          <div
             id="training-button"
-            aria-controls={currentDropdown === 'training' ? 'training-menu' : undefined}
+            aria-controls={
+              currentDropdown === "training" ? "training-menu" : undefined
+            }
             aria-haspopup="true"
-            aria-expanded={currentDropdown === 'training' ? 'true' : undefined}
-            onClick={(e) => handleDropdownClick(e, 'training')}
-            className="flex text-black"
+            aria-expanded={currentDropdown === "training" ? "true" : undefined}
+            onClick={(e) => handleDropdownClick(e, "training")}
+            className="flex mx-2 gap-[8px] p-[8px] text-black"
           >
-
-            التدريب والدعم
+            <span className="font-tajawal text-[16px] font-normal leading-[24px] text-left">
+              التدريب والدعم
+            </span>
             <GoChevronDown className="m-1 text-xl" />
-          </Button>
+          </div>
           <Menu
             id="training-menu"
             anchorEl={dropdownAnchorEl}
-            open={currentDropdown === 'training'}
+            open={currentDropdown === "training"}
             onClose={handleClose}
             MenuListProps={{
-              'aria-labelledby': 'training-button',
+              "aria-labelledby": "training-button",
             }}
           >
             <MenuItem onClick={handleClose}>
-              <Link href="/research_training" className="no-underline text-black">
+              <Link
+                href="/research_training"
+                className="no-underline text-black font-tajawal text-[16px] font-normal leading-[24px] text-left"
+              >
                 التدريب البحثي
               </Link>
             </MenuItem>
@@ -149,13 +160,15 @@ const Navbar = () => {
 
           <Link
             href="/contuct_us"
-            className="text-[black] hover:text-[#11898C] no-underline"
+            className="text-black gap-[8px] p-[8px] mx-2 hover:text-[#11898C] no-underline font-tajawal text-[16px] font-normal leading-[24px] text-left"
           >
-            اتصل بنا
+            <span className="font-tajawal  text-[16px] font-normal leading-[24px] text-left">
+              تواصل معنا
+            </span>
           </Link>
         </div>
         <button
-          className="m-2 h-[35px] w-[120px] bg-[#0f7d7f] text-white hover:bg-[#11898C]"
+          className="m-2 h-[35px] w-[120px]  bg-[#0f7d7f] text-white hover:bg-[#11898C]"
           style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
         >
           تبرع الان

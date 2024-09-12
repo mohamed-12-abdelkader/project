@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from "@/ui/card/ConferenceCard";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
@@ -11,17 +10,15 @@ const data = [
   { title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام", url: "#", imageUrl: img, date: "1 محرم 1446" },
   { title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام", url: "#", imageUrl: img, date: "1 محرم 1446" },
   { title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام", url: "#", imageUrl: img, date: "1 محرم 1446" },
-]
+];
 
 const Conference = () => {
   return (
     <div
       dir="rtl"
       className="lg:flex lg:flex-col lg:items-end mt-[120px]"
-
     >
       <div className="w-full app-container flex justify-center lg:relative">
-        {/* top here based on => (splide height - height) / 2 */}
         <div className="conference-desc max-w-[621px] lg:max-w-[416px] lg:absolute lg:top-[102.6px] lg:right-0">
           <h1 className="font-bold text-[#353939]" style={{ fontSize: "28px" }}>
             انضم إلى مؤتمراتنا واستكشف أحدث التطورات في مجال أبحاث الأورام
@@ -38,6 +35,7 @@ const Conference = () => {
           </button>
         </div>
       </div>
+
       <div className="sm:app-container mt-4 lg:mt-0 relative lg:max-w-[55%] lg:w-min lg:mx-0 lg:px-0 select-none">
         <Splide
           hasTrack={false}
@@ -60,7 +58,6 @@ const Conference = () => {
             gap: '24px',
             direction: "rtl",
             breakpoints: {
-              // tailwind sm breakpoint, max-width 460px
               640: {
                 fixedWidth: "306px",
                 type: "loop",
@@ -68,16 +65,19 @@ const Conference = () => {
                 pagination: true,
                 focus: "center",
               },
-            }
+            },
           }}
           aria-labelledby="conference-members-carousel"
         >
           <SplideTrack>
-            {data.map((card, i) => <SplideSlide key={i}><Card card={card} /></SplideSlide>)}
+            {data.map((card, i) => (
+              <SplideSlide key={i}><Card card={card} /></SplideSlide>
+            ))}
           </SplideTrack>
+
           <div className="splide__arrows conference-arrows">
             <button
-              className="splide__arrow conference-arrow conference-next splide__arrow--next slide-btn-theme left-[10px] lg:left-[71px]  top-[210px]"
+              className="splide__arrow conference-arrow conference-next splide__arrow--next slide-btn-theme left-[10px] lg:left-[71px] top-[210px]"
             >
               <GoArrowLeft className="text-2xl text-white" />
             </button>
