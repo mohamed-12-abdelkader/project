@@ -2,13 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+@layer components {
+  .app-container {
+    width: 100%;
+    max-width: 1321px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 640px) {
+    .sm\:app-container {
+      width: 100%;
+      max-width: 1321px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: 1024px) {
+    .lg-t\:app-container {
+      width: 100%;
+      max-width: 1321px;
+      padding-left: 12px;
+      padding-right: 12px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
 
 body {
-  font-family: "Tajawal", sans-serif;
+  font-family: 'Tajawal', sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings: "slnt" 0;
+  font-variation-settings: 'slnt' 0;
 }
 
 .slider-container {
@@ -31,6 +62,166 @@ a {
   position: relative;
 }
 
+/* Splide Styles */
+.splide__pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+.splide__pagination li {
+  display: inline-block;
+  line-height: 1;
+  list-style-type: none;
+  margin: 0;
+  pointer-events: auto;
+}
+.splide:not(.is-overflow) .splide__pagination {
+  display: none;
+}
+.splide__pagination {
+  /* bottom: 0; */
+  left: 0;
+  padding: 0 1em;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.splide__pagination__page {
+  background: #ccc;
+  border: 0;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 3px;
+  opacity: 0.7;
+  padding: 0;
+  position: relative;
+  transition: transform 0.2s linear;
+  height: 12px;
+  width: 12px;
+}
+.splide__pagination__page.is-active {
+  background: #11898c;
+  transform: scale(1.4);
+  z-index: 1;
+}
+.splide__pagination__page:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.splide__pagination__page:focus-visible {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+.splide.is-focus-in .splide__pagination__page:focus {
+  outline: 3px solid #0bf;
+  outline-offset: 3px;
+}
+.splide__pagination--ttb {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: auto;
+  padding: 1em 0;
+  right: 0.5em;
+  top: 0;
+}
+.splide__arrows > button:disabled {
+  background-color: #a9afaf;
+}
+.splide__pagination.discover-pagination {
+  bottom: 55px;
+}
+.splide__pagination.association-pagination {
+  bottom: -20px;
+}
+.splide__pagination.conference-pagination {
+  bottom: 55px;
+}
+.splide__pagination.news-pagination {
+  bottom: -35px;
+}
+
+/* News carousel */
+.news-cards-splide .splide__slide .card {
+  /* transition: transform 0.3s ease;
+  transition: width 0.3s ease, height 0.3s ease; */
+  overflow: hidden;
+  border-radius: 24px;
+  width: 502px;
+  height: 380px;
+}
+.news-cards-splide {
+  /* Must set fixed height here to prevent layout shift for arrows buttons */
+  min-height: 443px;
+}
+.news-cards-splide .splide__slide .card .overlay {
+  transition: background-color 0.4s ease;
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: transparent;
+  position: absolute;
+  inset: 0;
+}
+.news-cards-splide .splide__slide .card .overlay p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 64px;
+  color: white;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -1.5%;
+  max-width: 520px;
+}
+.news-cards-splide .splide__slide.is-active .card {
+  width: 636px;
+  height: 443px !important;
+}
+.news-cards-splide .splide__slide.is-active .card .overlay {
+  display: flex;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+.news-cards-splide .splide__slide:not(.is-active):hover {
+  transform: scale(1.01);
+}
+.news-cards-splide .splide__list {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 640px) {
+  .news-cards-splide {
+    min-height: 0;
+  }
+  .news-cards-splide .splide__slide {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .news-cards-splide .splide__slide .card {
+    aspect-ratio: 636 / 500;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 10px;
+  }
+  .news-cards-splide .splide__slide.is-active .card {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .news-cards-splide .splide__slide .card .overlay p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+.shadow-cards .splide__track {
+  padding-bottom: 120px;
+}
+
+/* If decide to remove component/slider/Slider so no needed for this select, you can remove it! */
 .slide-btn {
   position: absolute;
   top: 50%;
@@ -40,6 +231,25 @@ a {
   cursor: pointer;
   background-color: #11898c;
   z-index: 10;
+}
+
+.slide-btn-theme {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: #11898c;
+  z-index: 10;
+}
+
+.slide-btn-theme:not(:disabled):hover {
+  background-color: #0c6163;
 }
 
 .prev {
@@ -66,8 +276,17 @@ a {
   background-position: center;
 }
 
+.conference-desc {
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .conference-desc {
+    text-align: right;
+  }
+}
+
 .bg-section::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -87,42 +306,26 @@ a {
   color: #11898c;
 }
 .search {
-  background-image: linear-gradient(
-      179.99deg,
-      rgba(0, 0, 0, 0) -13.3%,
-      rgba(0, 0, 0, 0.6) 82.61%
-    ),
+  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
     url(../images/e2d0dcddf49fe50edc3e55fd46167996.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .training {
-  background-image: linear-gradient(
-      179.99deg,
-      rgba(0, 0, 0, 0) -13.3%,
-      rgba(0, 0, 0, 0.6) 82.61%
-    ),
+  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
     url(../images/b84c9b40b64ee90e7d4edebb05a9bd28.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .suport {
-  background-image: linear-gradient(
-      179.99deg,
-      rgba(0, 0, 0, 0) -13.3%,
-      rgba(0, 0, 0, 0.6) 82.61%
-    ),
+  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
     url(../images/0b5b59176accb0e4f6f6caa29fb87e3a.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mange {
-  background-image: linear-gradient(
-      179.99deg,
-      rgba(0, 0, 0, 0) -13.3%,
-      rgba(0, 0, 0, 0.6) 82.61%
-    ),
+  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
     url(../images/59edae449e7756a6aad1f8c5fe99d2f2.png);
   background-repeat: no-repeat;
   background-size: cover;

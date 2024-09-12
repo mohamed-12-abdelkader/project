@@ -66,6 +66,7 @@ const index = () => {
             src={img}
             className="h-[550px] w-[540px] m-auto"
             style={{ borderRadius: "20px" }}
+            alt={img}
           />
         </div>
       </div>

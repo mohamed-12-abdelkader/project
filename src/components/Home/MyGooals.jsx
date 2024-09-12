@@ -18,7 +18,7 @@ const MyGooals = () => {
         <div className="w-[400px]">
           <div className="text-center">
             <div className="flex justify-center">
-              <Image src={img1} className="w-[80px] h-[65px]" />
+              <Image src={img1} className="w-[80px] h-[65px]" alt={img1} />
             </div>
             <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
@@ -26,8 +26,8 @@ const MyGooals = () => {
           </div>
           <div className="text-center">
             <p className="text-[#353939]">
-              "نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
-              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة."
+            &quot;نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
+              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة.&quot;
             </p>
           </div>
           <div className="flex justify-center my-3">
@@ -40,7 +40,7 @@ const MyGooals = () => {
         <div className="w-[400px]">
           <div className="text-center">
             <div className="flex justify-center">
-              <Image src={img2} className="w-[90px] h-[65px]" />
+              <Image src={img2} className="w-[90px] h-[65px]" alt={img2} />
             </div>
             <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
@@ -48,8 +48,8 @@ const MyGooals = () => {
           </div>
           <div className="text-center">
             <p className="text-[#353939]">
-              "نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
-              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة."
+            &quot;نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
+              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة.&quot;
             </p>
           </div>
           <div className="flex justify-center my-3">
@@ -62,7 +62,7 @@ const MyGooals = () => {
         <div className="w-[400px]">
           <div className="text-center">
             <div className="flex justify-center">
-              <Image src={img3} className="w-[50px] h-[65px]" />
+              <Image src={img3} className="w-[50px] h-[65px]" alt={img3} />
             </div>
             <p className="font-medium my-3 text-[#353939]">
               تسهيل لوجستيات البحث
@@ -70,8 +70,8 @@ const MyGooals = () => {
           </div>
           <div className="text-center">
             <p className="text-[#353939]">
-              "نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
-              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة."
+            &quot;نحن هنا لتقديم الدعم اللوجستي اللازم للباحثين، من خلال توفير
+              الموارد والأدوات لضمان تنفيذ أبحاثهم بكفاءة ودقة.&quot;
             </p>
           </div>
           <div className="text-center my-3">
