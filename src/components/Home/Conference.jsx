@@ -6,10 +6,10 @@ const Conference = () => {
   return (
     <div
       dir="rtl"
-      className="flex p-5 h-[500px] items-center justify-between"
+      className="flex  h-[500px] items-center justify-between"
       style={{ marginTop: "50px" }}
     >
-      <div className="w-[30%]">
+      <div className="w-[30%] p-5">
         <h1 className="text-xl font-bold text-[#353939] ">
           انضم إلى مؤتمراتنا واستكشف أحدث التطورات في مجال أبحاث الأورام
         </h1>

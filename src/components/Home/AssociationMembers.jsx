@@ -40,33 +40,35 @@ const AssociationMembers = () => {
       <div className="w-[92%] mx-auto">
         <Slider>
           {[...Array(8)].map((_, index) => (
-              <div
+            <div
               dir="rtl"
               className="inline-block  mx-2  "
               style={{
                 flexShrink: 0,
                 width: "330PX",
-              
+
                 borderRadius: "10px",
               }}
             >
-              <div className="h-[210px] bg-[#D7DADA]">
+              <div className="w-[305px] h-[209px]  flex justify-center gap-2 rounded-t-[9px]  bg-[#D7DADA]">
                 <Image
                   src={img}
-                  className="w-[100%] h-[200px]"
+                  className="w-[180px] h-[209px]"
                   style={{ borderRadius: "10px" }}
                 />
               </div>
               <div className="p-2">
-              <div className="text-center my-2">
-            <h1 className="text-xl font-bold text-[#353939] my-2">
-              {" "}
-              سعود صالح عبدالكريم الصواب{" "}
-            </h1>
-            <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
-          </div>
+                <div className="text-center my-2">
+                  <h1 className="text-xl font-bold text-[#353939] my-2">
+                    {" "}
+                    سعود صالح عبدالكريم الصواب{" "}
+                  </h1>
+                  <p className="text-[#353939] font-normal">
+                    {" "}
+                    رئيس مجلس الادارة{" "}
+                  </p>
+                </div>
               </div>
-             
             </div>
           ))}
         </Slider>

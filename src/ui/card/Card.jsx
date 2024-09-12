@@ -6,10 +6,10 @@ const Card = () => {
   return (
     <div
       dir="rtl"
-      className="inline-block  mx-2 border "
+      className="inline-block  mx-2 border h-[314px] "
       style={{
         flexShrink: 0,
-        width: "320PX",
+        width: "300px",
         boxShadow: `
                0px 9px 21px 0px #11898C0A,
           0px 38px 38px 0px #11898C08,
@@ -23,8 +23,13 @@ const Card = () => {
       <div>
         <Image
           src={img}
-          className="w-[100%] h-[200px]"
-          style={{ borderRadius: "10px" }}
+          alt="Sample Image"
+          className="w-full h-[200px]"
+          style={{
+            width: "306px",
+            height: "314px",
+            borderRadius: "16px 16px 0px 0px",
+          }}
         />
       </div>
       <div className="p-2">

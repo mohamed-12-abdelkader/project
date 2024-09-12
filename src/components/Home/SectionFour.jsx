@@ -42,9 +42,9 @@ const SectionFour = () => {
             <span className="font-medium text-[#353939] ">القيم</span> :
             الشفافية، الإبداع، الاستدامة، الإتقان.
           </p>
-          <Link href="/about">
+          <Link href="/about" className="my-5">
             <button
-              className="m-2 h-[35px] w-[150px] text-[#0f7d7f]"
+              className="m-2 my-3 h-[35px] w-[150px] text-[#0f7d7f]"
               style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
             >
               اكتشف المزيد
