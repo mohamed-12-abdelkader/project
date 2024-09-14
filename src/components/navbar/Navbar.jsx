@@ -98,7 +98,7 @@ const Navbar = () => {
           </Menu>
 
           <Link
-            href="/search"
+            href="/research"
             className="text-black mx-2 gap-[8px] p-[8px]  hover:text-[#11898C] no-underline font-tajawal text-[16px] font-normal leading-[24px] text-left"
           >
             الابحاث
