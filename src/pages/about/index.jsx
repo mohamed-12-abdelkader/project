@@ -13,30 +13,30 @@ const index = () => {
         <h1 className="text-3xl font-bold text-[#353939] my-3">
           بالبحث، ننقذ الأرواح{" "}
         </h1>
-        <div className="w-[50%] m-auto text-center my-2">
+        <div className="w-[90%] m-auto text-center my-2 md:w-[50%]">
           <p className="text-[#353939] ">
-            &quot;جمعية داعم لأبحاث الأورام تكرس جهودها لتحقيق تقدم ملموس في مكافحة
-            السرطان وإنقاذ حياة المرضى من خلال دعم الأبحاث العلمية والابتكارات
-            الطبية.&quot;
+            &quot;جمعية داعم لأبحاث الأورام تكرس جهودها لتحقيق تقدم ملموس في
+            مكافحة السرطان وإنقاذ حياة المرضى من خلال دعم الأبحاث العلمية
+            والابتكارات الطبية.&quot;
           </p>
         </div>
       </div>
-      <div className="flex w-[90%] m-auto my-5">
-        <div className="w-[50%]">
+      <div className=" w-[90%] m-auto my-5 md:flex">
+        <div className="md:w-[50%]">
           <Image
             src={img}
             className="h-[600px] w-[100%]"
             style={{ borderRadius: "10px" }}
             alt={img}
-            />
+          />
         </div>
-        <div className="mx-3 w-[50%]">
+        <div className="my-3 md:w-[50%]">
           <Image
             src={img}
             className="   h-[290px] w-[100%]"
             style={{ borderRadius: "10px" }}
             alt={img}
-            />
+          />
           <Image
             src={img}
             className=" mt-[20px] h-[290px]  w-[100%]"
@@ -50,7 +50,7 @@ const index = () => {
         <h1 className="text-xl text-[#353939] my-2 font-bold">
           تعريف الجمعية{" "}
         </h1>
-        <div className="w-[60%] m-auto text-center">
+        <div className="w-[90%] m-auto text-center md:w-[60%] m-auto">
           <p className="text-[#353939] my-5">
             جمعية داعم لأبحاث الأورام، مؤسسة غير ربحية تهدف إلى دعم الباحثين في
             مجال الأورام وتعزيز أبحاث السرطان لتحقيق مستقبل صحي أفضل. نؤمن بأن
@@ -61,9 +61,9 @@ const index = () => {
         </div>
       </div>
       {""}
-      <div className="flex my-[80px] w-[95%] justify-center m-auto">
+      <div className=" my-[80px] w-[95%]  m-auto md:flex justify-center">
         <div
-          className="h-[250px] w-[400px] m-3 flex items-center justify-center"
+          className="h-[250px] w-[90%]  m-auto  my-3 flex items-center justify-center md:w-[400px]"
           style={{
             boxShadow: `
       0px 3px 6px 0px #11898C0D,
@@ -86,7 +86,7 @@ const index = () => {
           </div>
         </div>
         <div
-          className="h-[250px] w-[400px] m-3 flex items-center justify-center"
+          className="h-[250px] w-[90%]  m-auto  my-3 flex items-center justify-center md:w-[400px]"
           style={{
             boxShadow: `
       0px 3px 6px 0px #11898C0D,
@@ -109,7 +109,7 @@ const index = () => {
           </div>
         </div>
         <div
-          className="h-[250px] w-[400px] m-3 flex items-center justify-center"
+          className="h-[250px] w-[90%]  m-auto  my-3 flex items-center justify-center md:w-[400px]"
           style={{
             boxShadow: `
       0px 3px 6px 0px #11898C0D,
@@ -140,7 +140,7 @@ const index = () => {
             ابقَ على اطلاع على آخر أخبار و مستجدات الجمعية
           </p>
         </div>
-        <div className="flex justify-center my-3">
+        <div className=" my-3 text-center md:flex justify-center">
           <button
             className="m-2 h-[35px] w-[200px] bg-[#0f7d7f] text-white"
             style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
@@ -167,7 +167,7 @@ const index = () => {
           </button>
         </div>
         <div className="flex flex-wrap w-[95%] m-auto justify-center">
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -178,9 +178,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -191,9 +190,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -204,9 +202,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -217,9 +214,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -230,9 +226,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -243,9 +238,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -256,9 +250,8 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
-        <div className="w-[280px] h-[300px] my-3 mx-2">
+          <div className="w-[280px] h-[300px] my-3 mx-2">
             <div className="h-[210px] bg-[#D7DADA]">
               <Image src={img2} className="h-[100%] " alt={img2} />
             </div>
@@ -269,7 +262,6 @@ const index = () => {
               </h1>
               <p className="text-[#353939] font-normal"> رئيس مجلس الادارة </p>
             </div>
-      
           </div>
         </div>
       </div>
@@ -291,8 +283,8 @@ const index = () => {
         </div>
       </div>
       {""}
-      <div className="h-[660px] flex my-[80px] justify-between">
-        <div className="flex w-[90%] m-auto items-center justify-between">
+      <div className=" flex my-[80px] justify-between md:h-[660px]">
+        <div className=" w-[90%] m-auto md:flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold text-[#353939] my-5">
               تاريخ الجمعية
@@ -315,19 +307,19 @@ const index = () => {
       </div>
       {""}
       {""}
-      <div className="h-[660px] flex my-[80px] justify-between">
-        <div className="flex w-[90%] m-auto items-center justify-between">
+      <div className=" flex my-[80px] justify-between md:h-[660px]">
+        <div className=" w-[90%] m-auto md:flex items-center justify-between">
           <Image
             src={img3}
             className="h-[660px] w-[680px]"
             style={{ borderRadius: "20px" }}
             alt={img2}
           />
-          <div className="mx-[50px]">
+          <div className=" text-center md:mx-[50px]">
             <h1 className="text-xl font-bold text-[#353939] my-5">
               تعزيز التغيير من خلال المعرفة والمشاركة المجتمعية
             </h1>
-            <div className="w-[350px]  ">
+            <div className="text-center  md:w-[350px]  ">
               <p className="text-[]">
                 منذ تأسيسها، نجحت الجمعية في دعم العديد من الأبحاث والمبادرات
                 التي تسعى إلى تحسين الرعاية الصحية للمرضى وتقديم دعم لوجستي
@@ -346,20 +338,20 @@ const index = () => {
       </div>
       {""}
       {""}
-      <div className="h-[660px] flex my-[80px] justify-between">
-        <div className="flex w-[90%] m-auto items-center justify-between">
+      <div className=" flex my-[80px] justify-between md:h-[660px]">
+        <div className=" w-[90%] m-auto md:flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold text-[#353939] my-5">
               تعزيز التغيير من خلال المعرفة والمشاركة المجتمعية
             </h1>
             <div className="w-[350px] ">
               <p className="text-[#353939]">
-                &quot;نؤمن بأن التغيير الحقيقي يبدأ من المشاركة المجتمعية الفعالة
-                ونشر المعرفة. من خلال مؤتمراتنا وفعالياتنا، نجمع بين الباحثين
-                والخبراء والمجتمع لمناقشة أحدث التطورات في مجال أبحاث الأورام
-                والعمل معًا لتحقيق مستقبل أفضل.&quot;{" "}
+                &quot;نؤمن بأن التغيير الحقيقي يبدأ من المشاركة المجتمعية
+                الفعالة ونشر المعرفة. من خلال مؤتمراتنا وفعالياتنا، نجمع بين
+                الباحثين والخبراء والمجتمع لمناقشة أحدث التطورات في مجال أبحاث
+                الأورام والعمل معًا لتحقيق مستقبل أفضل.&quot;{" "}
               </p>
-              <div className="flex my-5">
+              <div className=" text-center my-5 md:flex">
                 <button
                   className="m-2 h-[35px] w-[220px] bg-[#11898C] text-[white]"
                   style={{ border: "1px solid white", borderRadius: "30px" }}

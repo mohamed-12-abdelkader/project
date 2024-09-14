@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-
 const ConferenceCard = ({ card }) => {
   return (
     <div
@@ -16,14 +15,14 @@ const ConferenceCard = ({ card }) => {
       `,
         borderRadius: "16px",
         overflow: "hidden",
-        height: "100%",
+        width: "306px",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
       }}
+      className="h-[491px] w-[306px] m-2"
     >
       <div>
-
         <div>
           <Image
             src={card.imageUrl}
@@ -34,7 +33,16 @@ const ConferenceCard = ({ card }) => {
         </div>
         <div className="p-2">
           <p className="font-normal text-[#353939] mt-3">{card.date}</p>
-          <h1 className="text-xl font-bold text-[#353939]">
+
+          {/* Ensure the title has a max-width of 270px and wraps to a new line */}
+          <h1
+            className="text-xl font-bold text-[#353939]"
+            style={{
+              maxWidth: "270px",
+              wordWrap: "break-word",
+              whiteSpace: "normal",
+            }}
+          >
             {card.title}
           </h1>
         </div>
