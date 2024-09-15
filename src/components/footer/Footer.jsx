@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div
       dir="rtl"
-      className="bg-[#11898C] w-[100%] py-5  px-3 md:h-[380px] py-5"
+      className="bg-[#11898C] w-[100%] py-5  px-3 md:h-[380px]"
       style={{ position: "relative", overflow: "hidden" }}
     >
       <div className="w-[90%] m-auto md:flex justify-between">
@@ -14,6 +14,7 @@ const Footer = () => {
             style={{ zIndex: "1000" }}
             src={logo}
             className="w-[204px] h-[95px] text-white"
+            alt="logo"
           />
         </div>
         <div style={{ zIndex: "1000" }}>
