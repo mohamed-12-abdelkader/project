@@ -261,6 +261,7 @@ a {
 .researches-search_right-element__drop-down-menu {
   z-index: 2000;
   margin-top: 10px;
+  border-radius: 8px;
 }
 .researches-search_right-element__drop-down-menu > div {
   display: flex;
@@ -316,8 +317,6 @@ a {
   font-size: 16px;
   text-decoration: none;
 }
-.pag-btn_main {
-}
 .pag-btn_main__active {
   color: #353939;
 }
@@ -341,7 +340,8 @@ a {
   color: #e7f3f4;
   z-index: 10;
 }
-.pag-btn_numbers__disabled {
+.pag-btn_numbers__disabled:hover {
+  color: #e7f3f4
 }
 .pag-btn_numbers__disabled:hover {
   background-color: #11898c;
