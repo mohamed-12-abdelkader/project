@@ -1,12 +1,46 @@
 import React from "react";
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Card from "@/ui/card/NewsCard";
+import useGitData from "@/server/useGitData";
 
-// Mock data
-const newsCards = new Array(3).fill({ imageUrl: "/news.jpeg", title: "جمعية داعم تستضيف ورشة عمل متقدمة حول أحدث تقنيات الأبحاث في مجال السرطان. الورشة ستتناول تقنيات  ال CAR-T-CEll الجديدة في  علاج السرطان." })
-
+// News component
 const News = () => {
+  const [data, loading, error] = useGitData({ prop: "news" });
+
+  // Handle loading state
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <p className="text-lg font-medium text-[#353939]">
+          جارٍ تحميل الأخبار...
+        </p>
+      </div>
+    );
+  }
+
+  // Handle error state
+  if (error) {
+    return (
+      <div className="text-center mt-10">
+        <p className="text-lg font-medium text-red-600">
+          حدث خطأ أثناء تحميل الأخبار.
+        </p>
+      </div>
+    );
+  }
+
+  // Handle empty data
+  if (!data || data.length === 0) {
+    return (
+      <div className="text-center mt-10">
+        <p className="text-lg font-medium text-[#353939]">
+          لا توجد أخبار حالياً.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="mt-[120px] h-[500px]">
       <div className="text-center">
@@ -20,19 +54,18 @@ const News = () => {
       <div className="w-full mt-[32px] relative select-none">
         <Splide
           hasTrack={false}
-          className="news-cards-splide" // Ability to select specific carousel without conflict.
+          className="news-cards-splide"
           options={{
             pagination: false,
-            // fixedWidth: "502px", // Not focus card
             autoWidth: true,
             autoHeight: true,
             start: 0,
             classes: {
-              arrows: 'splide__arrows news-arrows',
-              arrow: 'splide__arrow news-arrow',
-              prev: 'splide__arrow--prev news-prev',
-              next: 'splide__arrow--next news-next',
-              pagination: 'splide__pagination news-pagination',
+              arrows: "splide__arrows news-arrows",
+              arrow: "splide__arrow news-arrow",
+              prev: "splide__arrow--prev news-prev",
+              next: "splide__arrow--next news-next",
+              pagination: "splide__pagination news-pagination",
             },
             focus: "center",
             omitEnd: true,
@@ -42,37 +75,32 @@ const News = () => {
             slideFocus: true,
             trimSpace: false,
             rewind: false,
-            gap: '24px',
+            gap: "24px",
             direction: "rtl",
             breakpoints: {
-              // talwind sm breakpoint, max-width 460px
               640: {
                 arrows: false,
                 drag: true,
                 isNavigation: false,
                 pagination: true,
               },
-            }
+            },
           }}
-          // when splide init, css styles increase a card size, that trigger shifting on the slider, but when move to any dir every thing be ok.
-          // there other solution, by add fixedWidth option with a centred card width.
-          onMounted={(e) => {
-            e.go(">")
-          }}
+          onMounted={(e) => e.go(">")}
           aria-labelledby="news-cards-carousel"
         >
           <SplideTrack>
-            {newsCards.map((card, i) => <SplideSlide key={i}><Card imageUrl={card.imageUrl} title={card.title} /></SplideSlide>)}
+            {data.map((card, i) => (
+              <SplideSlide key={i}>
+                <Card imageUrl={card.image} title={card.title} />
+              </SplideSlide>
+            ))}
           </SplideTrack>
           <div className="splide__arrows news-arrows">
-            <button
-              className="splide__arrow news-arrow news-next splide__arrow--next slide-btn-theme left-[10px] lg:left-[105px]  top-[225px]"
-            >
+            <button className="splide__arrow news-arrow news-prev splide__arrow--prev slide-btn-theme left-[10px] lg:left-[105px] top-[225px]">
               <GoArrowLeft className="text-2xl text-white" />
             </button>
-            <button
-              className="splide__arrow news-arrow news-prev splide__arrow--prev slide-btn-theme right-[10px] lg:right-[105px] top-[225px]"
-            >
+            <button className="splide__arrow news-arrow news-next splide__arrow--next slide-btn-theme right-[10px] lg:right-[105px] top-[225px]">
               <GoArrowRight className="text-2xl text-white" />
             </button>
           </div>

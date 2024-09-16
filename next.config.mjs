@@ -1,6 +1,9 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  images: {
+    domains: ["daem.main-brains.com"],
+  },
 };
 
 export default nextConfig;

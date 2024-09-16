@@ -1,7 +1,38 @@
 import React from "react";
-import img from "../../images/89c2be04dfa7a7ab14423059955b4586.png";
 import Image from "next/image";
+import useGitData from "@/server/useGitData";
+
 const Events = () => {
+  const [data, loading, error] = useGitData({ prop: "event-home" });
+
+  // Handle loading state
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <p className="text-lg font-medium text-[#353939]">
+          جارٍ تحميل البيانات...
+        </p>
+      </div>
+    );
+  }
+
+  // Handle error state
+  if (error) {
+    return (
+      <div className="text-center mt-10">
+        <p className="text-lg font-medium text-red-600">
+          حدث خطأ أثناء تحميل البيانات.
+        </p>
+      </div>
+    );
+  }
+
+  // Ensure data is available and has the expected structure
+  const eventData =
+    data && data[0]
+      ? data[0]
+      : { description: "لا توجد بيانات", image: "/default-image.png" };
+
   return (
     <div className="app-container mt-[50px]">
       <div className="text-center">
@@ -10,9 +41,7 @@ const Events = () => {
         </h1>
         <div className="w-[70%] text-center m-auto my-3">
           <p className="my-2 font-normal text-[#353939]">
-            &quot;نقدم مجموعة متنوعة من الفعاليات المتميزة التي تهدف إلى تعزيز
-            المعرفة وزيادة الوعي في مجال أبحاث الأورام. انضم إلينا في فعالياتنا
-            القادمة وكن جزءًا من التغيير.&quot;
+            {eventData.description}
           </p>
         </div>
         <button
@@ -24,10 +53,12 @@ const Events = () => {
       </div>
       <div>
         <Image
-          src={img}
+          src={eventData.image}
+          alt="ابقَ على اطلاع على فعالياتنا و مبادراتنا"
           className="w-[95%] m-auto h-[500px]"
           style={{ borderRadius: "20px" }}
-          alt="ابقَ على اطلاع على فعالياتنا و مبادراتنا"
+          width={1200} // Provide width for the Next.js Image component
+          height={500} // Provide height for the Next.js Image component
         />
       </div>
     </div>

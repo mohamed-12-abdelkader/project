@@ -9,7 +9,7 @@ import PartnersSuccess from "@/components/Home/PartnersSuccess";
 import SectionFour from "@/components/Home/SectionFour";
 import Sectionthree from "@/components/Home/Sectionthree";
 import SectionTwo from "@/components/Home/SectionTwo";
-import Navbar from "@/components/navbar/Navbar";
+
 import React from "react";
 
 const HomePage = () => {

@@ -1,19 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import Card from "@/ui/card/ConferenceCard";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
+import useGitData from "@/server/useGitData";
 
 // Mock data
-const data = [
-  { date: "1 محرم 1446", title: "العلاج المناعي: الأمل الجديد في مكافحة السرطان", url: "#", imageUrl: "/discover1.png" },
-  { date: "1 محرم 1446", title: "ال (RNA) ودوره في تشخيص وعلاج السرطان", url: "#" , imageUrl: "/discover2.png"},
-  { date: "1 محرم 1446", title: "استخدام الذكاء الاصطناعي لتحليل البيانات الجينية للسرطان", url: "#", imageUrl: "/discover3.png" },
-  { date: "1 محرم 1446", title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام", url: "#" , imageUrl: "/discover4.png"},
-]
-const cardsData = Array.from({ length: 2 }, () => data).flat()
 
 const Sectionthree = () => {
+  const [data, loading] = useGitData({ prop: "researches" });
+
   return (
     <div className="sm:app-container my-5 mt-[50px]">
       <div className="text-center">
@@ -37,14 +33,14 @@ const Sectionthree = () => {
             perMove: 1,
             omitEnd: true,
             classes: {
-              arrows: 'splide__arrows discover-arrows',
-              arrow: 'splide__arrow discover-arrow',
-              prev: 'splide__arrow--prev discover-prev',
-              next: 'splide__arrow--next discover-next',
-              pagination: 'splide__pagination discover-pagination',
+              arrows: "splide__arrows discover-arrows",
+              arrow: "splide__arrow discover-arrow",
+              prev: "splide__arrow--prev discover-prev",
+              next: "splide__arrow--next discover-next",
+              pagination: "splide__pagination discover-pagination",
             },
             rewind: false,
-            gap: '24px',
+            gap: "24px",
             direction: "rtl",
             breakpoints: {
               // tailwind sm breakpoint, max-width 460px
@@ -54,23 +50,34 @@ const Sectionthree = () => {
                 pagination: true,
                 focus: "center",
               },
-            }
+            },
           }}
           aria-labelledby="conference-members-carousel"
         >
           <SplideTrack>
-            {cardsData.map((card, i) => <SplideSlide key={i}><Card card={card} /></SplideSlide>)}
+            {loading ? (
+              Array.from({ length: 4 }).map((_, i) => (
+                <SplideSlide key={i}>
+                  <Card loading />
+                </SplideSlide>
+              ))
+            ) : Array.isArray(data) && data.length > 0 ? (
+              data.map((card, i) => (
+                <SplideSlide key={i}>
+                  <Card card={card} />
+                </SplideSlide>
+              ))
+            ) : (
+              <div className="text-center">
+                <p>لا توجد بيانات متاحة حاليا</p>
+              </div>
+            )}
           </SplideTrack>
-          {/* <CarouselArrows prefix="discover" top="40%" left="-32px" right="-32px" /> */}
           <div className="splide__arrows conference-arrows">
-            <button
-              className="splide__arrow conference-arrow conference-next splide__arrow--next slide-btn-theme left-[10px] xxl:left-[-32px] top-[35%]"
-            >
+            <button className="splide__arrow conference-arrow conference-next splide__arrow--next slide-btn-theme left-[10px] xxl:left-[-32px] top-[35%]">
               <GoArrowLeft className="text-2xl text-white" />
             </button>
-            <button
-              className="splide__arrow conference-arrow conference-prev splide__arrow--prev slide-btn-theme right-[10px] xxl:right-[-32px] top-[35%]"
-            >
+            <button className="splide__arrow conference-arrow conference-prev splide__arrow--prev slide-btn-theme right-[10px] xxl:right-[-32px] top-[35%]">
               <GoArrowRight className="text-2xl text-white" />
             </button>
           </div>
@@ -91,6 +98,3 @@ const Sectionthree = () => {
 };
 
 export default Sectionthree;
-
-
-

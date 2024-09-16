@@ -487,3 +487,37 @@ a {
     display: contents !important;
   }
 }
+
+/* styles.css */
+/* styles.css */
+
+/* اللون الأساسي لجميع الأزرار غير النشطة */
+.pagination .page-item .page-link {
+  background-color: white; /* لون الخلفية */
+  color: #11898c; /* لون النص */
+  border: 1px solid #11898c; /* تحديد اللون للحافة */
+}
+
+/* لون زر "السابق" و"التالى" */
+.pagination .page-item .page-link {
+  background-color: #11898c; /* لون الخلفية */
+  color: white; /* لون النص */
+}
+
+/* تغيير لون الأزرار عند التمرير فوقها */
+.pagination .page-link:hover {
+  background-color: #f0f0f0; /* لون أفتح عند التمرير فوق الأزرار غير النشطة */
+}
+
+/* لون الأزرار النشطة */
+.pagination .active .page-link {
+  background-color: #0f7d7f; /* لون أفتح للزر النشط */
+  color: white; /* لون النص للزر النشط */
+  border: 1px solid #0f7d7f; /* تحديد اللون للحافة */
+}
+
+/* لون الأزرار غير النشطة عند التمرير فوقها */
+.pagination .page-item.disabled .page-link {
+  background-color: white; /* نفس لون الخلفية للأزرار غير النشطة */
+  color: #11898c; /* لون النص */
+}

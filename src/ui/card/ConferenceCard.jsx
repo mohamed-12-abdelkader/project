@@ -1,18 +1,42 @@
 import Image from "next/image";
 import React from "react";
+import ContentLoader from "react-content-loader";
 
-const ConferenceCard = ({ card }) => {
+const ConferenceCard = ({ card, loading }) => {
+  if (loading) {
+    return (
+      <div
+        style={{
+          borderRadius: "16px",
+          overflow: "hidden",
+          width: "306px",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+        className="h-[500px] w-[306px] m-2"
+      >
+        <ContentLoader
+          speed={2}
+          width={306}
+          height={500}
+          backgroundColor="#f3f3f3"
+          foregroundColor="#ecebeb"
+        >
+          <rect x="0" y="0" rx="10" ry="10" width="306" height="314" />
+          <rect x="10" y="330" rx="5" ry="5" width="270" height="20" />
+          <rect x="10" y="360" rx="5" ry="5" width="200" height="20" />
+          <rect x="10" y="420" rx="15" ry="15" width="250" height="35" />
+        </ContentLoader>
+      </div>
+    );
+  }
+
   return (
     <div
       dir="rtl"
       style={{
-        boxShadow: `
-          0px 9px 21px 0px #11898C0A,
-          0px 38px 38px 0px #11898C08,
-          0px 85px 51px 0px #11898C05,
-          0px 150px 60px 0px #11898C03,
-          0px 235px 66px 0px #11898C00
-      `,
+        boxShadow: `0px 9px 21px 0px #11898C0A`,
         borderRadius: "16px",
         overflow: "hidden",
         width: "306px",
@@ -20,23 +44,21 @@ const ConferenceCard = ({ card }) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      className="h-[500px] w-[306px] m-2"
+      className="h-[480px] w-[306px] m-2"
     >
       <div>
-        <div>
-          <Image
-            src={card.imageUrl}
-            width={306}
-            height={314}
-            alt={card.title}
-          />
-        </div>
+        <img
+          src={card.image}
+          alt={card.title}
+          style={{ width: "306px", height: "314px" }}
+        />
         <div className="p-2">
-          <p className="font-normal text-[#353939] mt-3">{card.date}</p>
+          <p className="font-normal text-[#353939] mt-3">
+            {card.date || "1 محرم 1446  "}
+          </p>
 
-          {/* Ensure the title has a max-width of 270px and wraps to a new line */}
           <h1
-            className="text-xl font-bold text-[#353939]"
+            className="text-xl font-bold text-[#353939] h-[70px] my-2"
             style={{
               maxWidth: "270px",
               wordWrap: "break-word",
