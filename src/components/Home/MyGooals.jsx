@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { GoArrowUpLeft } from "react-icons/go";
+import Image from "next/image"; // Import Next.js Image component
 
 import useGitData from "@/server/useGitData";
 
@@ -20,7 +21,6 @@ const MyGooals = () => {
     return (
       <div className="my-5 bg-[#E7F3F4] py-3 md:h-[370px] flex justify-center items-center">
         <div className="w-[90%] m-auto md:flex justify-between">
-          {/* Loading Skeleton for each goal */}
           {[1, 2, 3].map((item) => (
             <div key={item} className="w-[90%] m-auto my-2 md:w-[400px]">
               <SkeletonLoader />
@@ -30,12 +30,12 @@ const MyGooals = () => {
       </div>
     );
   }
-  console.log(data);
+
   // Ensure data exists and is not empty
   if (!data || data.length === 0) {
     return <div>No data available</div>;
   }
-  console.log("data", data);
+
   return (
     <div dir="rtl" className="my-5 bg-[#E7F3F4] py-3 md:h-[370px]">
       <div className="text-center py-4">
@@ -48,10 +48,12 @@ const MyGooals = () => {
           <div key={goal.id} className="w-[90%] m-auto my-2 md:w-[400px]">
             <div className="text-center">
               <div className="flex justify-center">
-                <img
+                <Image
                   src={goal.image}
+                  alt={`Goal ${index + 1}`} // Add alt text for accessibility
+                  width={80} // Specify width for Image component
+                  height={65} // Specify height for Image component
                   className="w-[80px] h-[65px]"
-                  alt={`Goal ${index + 1}`}
                 />
               </div>
               <p className="font-medium my-3 text-[#353939]">{goal.title}</p>
