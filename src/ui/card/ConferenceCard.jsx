@@ -44,7 +44,7 @@ const ConferenceCard = ({ card, loading }) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      className="h-[480px] w-[306px] m-2"
+      className="h-[500px] w-[306px] m-2"
     >
       <div>
         <img

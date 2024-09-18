@@ -3,6 +3,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import Card from "@/ui/card/NewsCard";
 import useGitData from "@/server/useGitData";
+import Link from "next/link";
 
 // News component
 const News = () => {
@@ -107,12 +108,14 @@ const News = () => {
         </Splide>
       </div>
       <div className="text-center mt-16 sm:mt-5">
-        <button
-          className="m-2 h-[35px] w-[150px] text-[#0f7d7f]"
-          style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-        >
-          اكتشف المزيد
-        </button>
+        <Link href={"/news"}>
+          <button
+            className="m-2 p-2 h-[35px] w-[150px] text-[#0f7d7f]"
+            style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+          >
+            اكتشف المزيد
+          </button>
+        </Link>
       </div>
     </div>
   );

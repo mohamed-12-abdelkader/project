@@ -3,6 +3,7 @@ import React from "react";
 import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 import useGitData from "@/server/useGitData";
 import { Spinner } from "react-bootstrap";
+import Link from "next/link";
 
 const HeroSection = () => {
   const [data, loading] = useGitData({ prop: "hero" });
@@ -65,17 +66,19 @@ const HeroSection = () => {
         <p className="my-2">{data[0].subtitle}</p>
         <div className="flex">
           <button
-            className="m-2 h-[35px] w-[150px] bg-[#0f7d7f] text-white"
+            className="m-2 p-2 h-[35px] w-[150px] bg-[#0f7d7f] text-white"
             style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
           >
             انضم الينا
           </button>
-          <button
-            className="button-hero m-2 h-[35px] w-[150px] text-[#0f7d7f]"
-            style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-          >
-            اكتشف المزيد
-          </button>
+          <Link href={"/news"}>
+            <button
+              className="button-hero m-2 h-[35px] p-2 w-[150px] text-[#0f7d7f]"
+              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+            >
+              اكتشف المزيد
+            </button>
+          </Link>
         </div>
       </div>
 

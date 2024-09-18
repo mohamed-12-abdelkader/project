@@ -2,12 +2,19 @@ import baseUrl from "@/api/baseUrl";
 import useGitData from "@/server/useGitData";
 import React, { useEffect, useState } from "react";
 import { CiMail } from "react-icons/ci";
+import img1 from "../../images/Eye.png";
+import img2 from "../../images/Group.png";
+import img3 from "../../images/Frame 1261157331.png";
+import Image from "next/image";
 
 const Info = () => {
   const [data, loading] = useGitData({ prop: "infoAboutUs" });
 
   const [description, setdata] = useState("");
   const [descriptionloading, setLoading] = useState(false);
+
+  // Array of images to display in order
+  const images = [img1, img2, img3];
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,7 +51,7 @@ const Info = () => {
 
       {/* Map through the data and display each item */}
       <div className="my-[80px] w-[95%] m-auto md:flex justify-center">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <div
             key={item.id}
             className="h-[250px] w-[90%] m-auto my-3 flex items-center justify-center md:w-[400px]"
@@ -58,11 +65,15 @@ const Info = () => {
               `,
             }}
           >
-            <div className="text-center">
+            <div className="text-center grid justify-center">
               <div className="flex justify-center">
-                <CiMail className="text-3xl text-[#11898C]" />
+                <Image
+                  src={images[index % images.length]} // Rotate through the images
+                  className="h-[30px] w-[58px]"
+                  alt={`Image for ${item.title}`}
+                />
               </div>
-              <h1 className="text-xl text-[#353939] font-bold my-3">
+              <h1 className="text-xl text-[#353939] font-bold my-1">
                 {item.title}
               </h1>
               <p className="text-[#353939] my-3">{item.description}</p>

@@ -83,10 +83,13 @@ const Sectionthree = () => {
           </div>
         </Splide>
       </div>
-      <div className="text-center sm:mt-[-90px]">
-        <Link href="/search">
+      <div
+        style={{ zIndex: "1000" }}
+        className="text-center mt-1 sm:mt-[-90px]"
+      >
+        <Link href="/research">
           <button
-            className="m-2 h-[35px] w-[200px] text-[#0f7d7f]"
+            className="m-2 h-[35px] w-[200px] text-[#0f7d7f] p-2"
             style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
           >
             عرض جميع الابحاث

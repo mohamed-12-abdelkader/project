@@ -50,7 +50,7 @@ const index = () => {
           </p>
         </div>
 
-        <div className="lg:w-[50%] mx-3 mt-5 lg:mt-0">
+        <div className="lg:w-[50%] mx-3  lg:mt-0">
           {[...Array(5)].map((_, index) => (
             <div key={index} className="h-[120px] sm:h-[150px] w-full flex m-2">
               <Image

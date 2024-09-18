@@ -381,7 +381,12 @@ const Navbar = () => {
                 dir="rtl"
                 onClick={handleClose}
               >
-                الدعم اللوجستى للباحثين
+                <Link
+                  href="/support"
+                  className="no-underline text-black font-tajawal text-[16px] font-normal leading-[24px] text-left"
+                >
+                  الدعم اللوجستى للباحثين
+                </Link>
               </MenuItem>
             </Menu>
 

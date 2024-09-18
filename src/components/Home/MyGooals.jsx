@@ -30,12 +30,12 @@ const MyGooals = () => {
       </div>
     );
   }
-
+  console.log(data);
   // Ensure data exists and is not empty
   if (!data || data.length === 0) {
     return <div>No data available</div>;
   }
-
+  console.log("data", data);
   return (
     <div dir="rtl" className="my-5 bg-[#E7F3F4] py-3 md:h-[370px]">
       <div className="text-center py-4">

@@ -4,6 +4,7 @@ import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 import useGitData from "@/server/useGitData";
+import Link from "next/link";
 
 const Conference = () => {
   const [data, loading] = useGitData({ prop: "conferences" });
@@ -18,12 +19,14 @@ const Conference = () => {
             شارك في مؤتمراتنا واستفد من أحدث الأبحاث والابتكارات في علاج
             السرطان. اكتشف كيف يمكنك المساهمة في إحداث تغيير حقيقي.
           </p>
-          <button
-            className="m-2 h-[35px] w-[200px] text-[#0f7d7f]"
-            style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-          >
-            عرض جميع المؤتمرات
-          </button>
+          <Link href={"/events"}>
+            <button
+              className="m-2  p-2 h-[35px] w-[200px] text-[#0f7d7f] my-4"
+              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+            >
+              عرض جميع المؤتمرات
+            </button>
+          </Link>
         </div>
       </div>
 
