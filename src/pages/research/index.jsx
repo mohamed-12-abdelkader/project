@@ -4,12 +4,17 @@ import SearchInput from "@/ui/researches/SearchInput";
 import Pagination from "@/ui/researches/pagination";
 import useGitData from "@/server/useGitData";
 import Image from "next/image";
+import Loading from "@/components/loading/Loading";
 
 export default function index({ totalPages, researchesData }) {
   const [data, loading] = useGitData({ prop: "researches" });
 
   if (loading) {
-    return <h1>جار التحميل ..........</h1>;
+    return (
+      <>
+        <Loading />
+      </>
+    );
   }
 
   if (!data || !Array.isArray(data)) {

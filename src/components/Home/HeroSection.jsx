@@ -1,20 +1,24 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 import useGitData from "@/server/useGitData";
 import { Spinner } from "react-bootstrap";
 import Link from "next/link";
+import Loading from "../loading/Loading";
+import { useLoading } from "../loading/LoadingContext";
 
 const HeroSection = () => {
+  const { setLoading } = useLoading();
   const [data, loading] = useGitData({ prop: "hero" });
 
   // Check if data is loading or is undefined/empty
-  if (loading) {
-    return (
-      <>
-        <Spinner animation="border" />
-      </>
-    );
+  useEffect(() => {
+    setLoading(loading);
+  }, [loading, setLoading]);
+
+  // Check if data is loading or is undefined/empty
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
   }
 
   // Ensure `data` is defined and has at least one item before accessing it

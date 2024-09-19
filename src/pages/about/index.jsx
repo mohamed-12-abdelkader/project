@@ -8,10 +8,11 @@ import useGitData from "@/server/useGitData";
 import { Spinner } from "react-bootstrap";
 import Info from "@/components/about/Info";
 import DetailsAboutUs from "@/components/about/DetailsAboutUs";
+import Loading from "@/components/loading/Loading";
 const index = () => {
   const [data, loading] = useGitData({ prop: "heroAboutUs" });
   if (loading) {
-    return <Spinner />;
+    return <Loading />;
   }
   console.log(data);
   return (

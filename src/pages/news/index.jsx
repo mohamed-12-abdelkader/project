@@ -1,12 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import useGitData from "@/server/useGitData";
+import Loading from "@/components/loading/Loading";
 
 const Index = () => {
   const [data, loading, error] = useGitData({ prop: "news" });
 
   if (loading) {
-    return <div>Loading...</div>; // عرض لودينج أثناء تحميل البيانات
+    return (
+      <div>
+        <Loading />
+      </div>
+    ); // عرض لودينج أثناء تحميل البيانات
   }
 
   if (error) {

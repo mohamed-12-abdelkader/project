@@ -9,12 +9,18 @@ import PartnersSuccess from "@/components/Home/PartnersSuccess";
 import SectionFour from "@/components/Home/SectionFour";
 import Sectionthree from "@/components/Home/Sectionthree";
 import SectionTwo from "@/components/Home/SectionTwo";
+import Loading from "@/components/loading/Loading";
+import { useLoading } from "@/components/loading/LoadingContext";
+import useGitData from "@/server/useGitData";
 
 import React from "react";
 
 const HomePage = () => {
+  const { loading } = useLoading();
+
   return (
     <div>
+      {loading && <Loading />}
       <HeroSection />
       <SectionTwo />
       <Sectionthree />

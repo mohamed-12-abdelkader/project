@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 import useGitData from "@/server/useGitData";
 import "bootstrap/dist/css/bootstrap.min.css"; // تأكد من استيراد Bootstrap CSS
 import Image from "next/image";
 import img from "../../images/artboard-2.png";
+import Loading from "../loading/Loading";
+import { useLoading } from "../loading/LoadingContext";
 const SectionTwo = () => {
+  const { setLoading } = useLoading();
   const [data, loading] = useGitData({ prop: "magazine" });
+  useEffect(() => {
+    setLoading(loading);
+  }, [loading, setLoading]);
 
   return (
     <div
