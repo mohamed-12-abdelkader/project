@@ -168,7 +168,7 @@ const AssociationMembers = () => {
         </Splide>
       </div>
       <div className="text-center mt-10 sm:mt-5">
-        <Link href={"/research"}>
+        <Link href={"/about"}>
           <button
             className="m-2 h-[35px] w-[150px] text-[#0f7d7f]"
             style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}

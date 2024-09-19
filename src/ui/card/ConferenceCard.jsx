@@ -15,6 +15,7 @@ const ConferenceCard = ({ card, loading }) => {
           justifyContent: "space-between",
         }}
         className="h-[500px] w-[306px] m-2"
+        dir="rtl" // Set direction to RTL for the card container
       >
         <ContentLoader
           speed={2}
@@ -34,7 +35,7 @@ const ConferenceCard = ({ card, loading }) => {
 
   return (
     <div
-      dir="rtl"
+      dir="rtl" // Keep direction to RTL for the card container
       style={{
         boxShadow: `0px 9px 21px 0px #11898C0A`,
         borderRadius: "16px",
@@ -52,11 +53,12 @@ const ConferenceCard = ({ card, loading }) => {
           alt={card.title}
           style={{ width: "306px", height: "314px" }}
         />
-        <div className="p-2">
+        <div dir="rtl" className="p-2 text-right">
+          {" "}
+          {/* Add text-right class */}
           <p className="font-normal text-[#353939] mt-3">
             {card.date || "1 محرم 1446  "}
           </p>
-
           <h1
             className="text-xl font-bold text-[#353939] h-[70px] my-2"
             style={{

@@ -1,34 +1,22 @@
 import React from "react";
 import Card from "@/ui/card/ConferenceCard";
 import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
+import useGitData from "@/server/useGitData";
+import { SplideSlide } from "@splidejs/react-splide";
 
-const data = [
-  {
-    title: "الوراثة الجزيئية وعلاج السرطان",
-    url: "#",
-    imageUrl: img,
-    date: "1 محرم 1446",
-  },
-  {
-    title: "الوراثة الجزيئية وعلاج السرطان",
-    url: "#",
-    imageUrl: img,
-    date: "1 محرم 1446",
-  },
-  {
-    title: "تطبيقات الذكاء الاصطناعي في أبحاث السرطان",
-    url: "#",
-    imageUrl: img,
-    date: "1 محرم 1446",
-  },
-  {
-    title: "العلاج بالخلايا الجذعية: أفق جديد لعلاج الأورام",
-    url: "#",
-    imageUrl: img,
-    date: "1 محرم 1446",
-  },
-];
 const index = () => {
+  const [data, loading] = useGitData({ prop: "conferences" });
+
+  // Handle loading state
+
+  // Handle error state
+
+  // Ensure data is available and has the expected structure
+  const eventData =
+    data && data[0]
+      ? data[0]
+      : { description: "لا توجد بيانات", image: "/default-image.png" };
+
   return (
     <div dir="rtl " className="mt-[100px]">
       <div className="text-center ">
@@ -56,9 +44,23 @@ const index = () => {
         <p>سجل الأن في الفعاليات القادمة و كن جزء من التغيير</p>
       </div>
       <div className="flex flex-wrap justify-center">
-        {data.map((card, i) => (
-          <Card key={i} card={card} />
-        ))}
+        {loading ? (
+          Array.from({ length: 4 }).map((_, i) => (
+            <SplideSlide key={i}>
+              <Card loading />
+            </SplideSlide>
+          ))
+        ) : Array.isArray(data) && data.length > 0 ? (
+          data.map((card, i) => (
+            <SplideSlide key={i}>
+              <Card card={card} />
+            </SplideSlide>
+          ))
+        ) : (
+          <div className="text-center">
+            <p>لا توجد بيانات متاحة حاليا</p>
+          </div>
+        )}
       </div>
       <div className="h-[100px]"></div>
     </div>
