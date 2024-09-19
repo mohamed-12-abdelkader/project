@@ -30,7 +30,7 @@ const News = () => {
       </div>
     );
   }
-
+  console.log("news", data);
   // Handle empty data
   if (!data || data.length === 0) {
     return (
