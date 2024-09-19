@@ -45,19 +45,21 @@ const ConferenceCard = ({ card, loading }) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      className="h-[500px] w-[306px] m-2"
+      className="h-[480px] w-[306px] m-2"
     >
       <div>
-        <img
+        <Image
           src={card.image}
           alt={card.title}
-          style={{ width: "306px", height: "314px" }}
+          width={306}
+          height={314}
+          style={{ objectFit: "cover" }}
         />
         <div dir="rtl" className="p-2 text-right">
           {" "}
           {/* Add text-right class */}
           <p className="font-normal text-[#353939] mt-3">
-            {card.date || "1 محرم 1446  "}
+            {card.date || "1 محرم 1446"}
           </p>
           <h1
             className="text-xl font-bold text-[#353939] h-[70px] my-2"
