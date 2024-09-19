@@ -14,8 +14,8 @@ const ConferenceCard = ({ card, loading }) => {
           flexDirection: "column",
           justifyContent: "space-between",
         }}
-        className="h-[500px] w-[306px] m-2"
-        dir="rtl" // Set direction to RTL for the card container
+        className="h-[500px] w-[306px] m-2" // تعيين ارتفاع الكارد إلى 500 بكسل
+        dir="rtl"
       >
         <ContentLoader
           speed={2}
@@ -35,7 +35,7 @@ const ConferenceCard = ({ card, loading }) => {
 
   return (
     <div
-      dir="rtl" // Keep direction to RTL for the card container
+      dir="rtl"
       style={{
         boxShadow: `0px 9px 21px 0px #11898C0A`,
         borderRadius: "16px",
@@ -45,7 +45,7 @@ const ConferenceCard = ({ card, loading }) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      className="h-[480px] w-[306px] m-2"
+      className="h-[480px] w-[306px] m-2" // تعيين ارتفاع الكارد إلى 500 بكسل
     >
       <div>
         <Image
@@ -53,20 +53,20 @@ const ConferenceCard = ({ card, loading }) => {
           alt={card.title}
           width={306}
           height={314}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", height: "300px" }}
         />
         <div dir="rtl" className="p-2 text-right">
-          {" "}
-          {/* Add text-right class */}
           <p className="font-normal text-[#353939] mt-3">
             {card.date || "1 محرم 1446"}
           </p>
           <h1
-            className="text-xl font-bold text-[#353939] h-[70px] my-2"
+            className="text-xl font-bold text-[#353939] my-2"
             style={{
+              height: "89px", // تعيين ارتفاع العنوان إلى 89 بكسل
               maxWidth: "270px",
               wordWrap: "break-word",
               whiteSpace: "normal",
+              overflow: "hidden", // تأكد من أن النص لا يتجاوز ارتفاع العنوان
             }}
           >
             {card.title}

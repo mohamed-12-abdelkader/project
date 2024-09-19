@@ -3,12 +3,10 @@ import React, { useEffect } from "react";
 import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 import useGitData from "@/server/useGitData";
 import { Spinner } from "react-bootstrap";
-<<<<<<< HEAD
+
 import Link from "next/link";
 import Loading from "../loading/Loading";
 import { useLoading } from "../loading/LoadingContext";
-=======
->>>>>>> c74708a76c74e4567ec11553842d0e17a20df173
 
 const HeroSection = () => {
   const { setLoading } = useLoading();
