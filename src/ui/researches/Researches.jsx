@@ -65,13 +65,24 @@ export default function Researches() {
 
   function handlePageChange(page) {
     setCurrPage(page);
+
+    // Scroll to top on page navigation
+    if (view.current) {
+      const elementPosition = view.current.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 150;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+    }
   }
 
   const startIndex = (currPage - 1) * PER_PAGE;
   const endIndex = startIndex + PER_PAGE;
   const paginatedData = data ? data.slice(startIndex, endIndex) : [];
   return (
-    <>
+    <div className="researches-grid">
       <Search handleChange={handleSearchChange} placeholder="أدخل كلمات البحث هنا" />
       {loading ? (
         <Loading />
@@ -101,6 +112,6 @@ export default function Researches() {
           />
         </>
       )}
-    </>
+    </div>
   );
 }
