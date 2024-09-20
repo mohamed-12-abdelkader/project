@@ -1,28 +1,18 @@
 'use client';
 
 import clsx from 'clsx';
-import Link from 'next/link';
 import { generatePagination } from '@/lib/utils';
-import { usePathname, useSearchParams } from 'next/navigation';
 
-export default function Pagination({ totalPages }) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const currentPage = Number(searchParams.get('page')) || 1;
+export default function Pagination({ totalPages, currentPage, onPageChange }) {
+  console.log(totalPages)
   const allPages = generatePagination(currentPage, totalPages);
-
-  const createPageURL = (pageNumber) => {
-    const params = new URLSearchParams(searchParams);
-    params.set('page', pageNumber.toString());
-    return `${pathname}?${params.toString()}`;
-  };
 
   return (
     <>
       <div className="flex justify-center items-center mt-8" style={{ columnGap: "24px" }}>
         <PaginationArrow
           direction="right"
-          href={createPageURL(currentPage + 1)}
+          click={() => onPageChange(currentPage + 1)}
           isDisabled={currentPage >= totalPages}
         />
 
@@ -38,7 +28,7 @@ export default function Pagination({ totalPages }) {
             return (
               <PaginationNumber
                 key={page}
-                href={createPageURL(page)}
+                click={() => onPageChange(page)}
                 page={page}
                 position={position}
                 isActive={currentPage === page}
@@ -49,7 +39,7 @@ export default function Pagination({ totalPages }) {
 
         <PaginationArrow
           direction="left"
-          href={createPageURL(currentPage - 1)}
+          click={() => onPageChange(currentPage - 1)}
           isDisabled={currentPage <= 1}
         />
       </div>
@@ -59,7 +49,7 @@ export default function Pagination({ totalPages }) {
 
 function PaginationNumber({
   page,
-  href,
+  click,
   isActive,
   position,
 }) {
@@ -74,14 +64,14 @@ function PaginationNumber({
   return isActive || position === 'middle' ? (
     <div className={className}>{page}</div>
   ) : (
-    <Link href={href} className={className} >
+    <div onClick={click} className={className} >
       {page}
-    </Link>
+    </div>
   );
 }
 
 function PaginationArrow({
-  href,
+  click,
   direction,
   isDisabled,
 }) {
@@ -103,8 +93,8 @@ function PaginationArrow({
   return isDisabled ? (
     <div className={className}>{text}</div>
   ) : (
-    <Link className={className} href={href}>
+    <div className={className} onClick={click}>
       {text}
-    </Link>
+    </div>
   );
 }

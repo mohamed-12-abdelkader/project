@@ -316,6 +316,7 @@ a {
 .pag-btn {
   font-size: 16px;
   text-decoration: none;
+  cursor: pointer;
 }
 .pag-btn_main__active {
   color: #353939;
