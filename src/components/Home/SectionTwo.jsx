@@ -6,17 +6,18 @@ import Image from "next/image";
 import img from "../../images/artboard-2.png";
 import Loading from "../loading/Loading";
 import { useLoading } from "../loading/LoadingContext";
+import Link from "next/link";
 const SectionTwo = () => {
   const { setLoading } = useLoading();
   const [data, loading] = useGitData({ prop: "magazine" });
   useEffect(() => {
     setLoading(loading);
   }, [loading, setLoading]);
-
+  console.log(data);
   return (
     <div
       dir="rtl"
-      className="w-full overflow-hidden relative z-0 mt-[] md:mt-[180px] bg-gradient-to-b from-white to-[#e8f4f5]"
+      className="w-full overflow-hidden relative z-0 mt-[15px] md:mt-[180px] bg-gradient-to-b from-white to-[#e8f4f5]"
     >
       {/* Bg Badge */}
       <div
@@ -47,18 +48,28 @@ const SectionTwo = () => {
                 {data[0]?.description}
               </p>
               <div className="flex flex-col sm:flex-row items-center my-3 gap-4">
-                <button
-                  className="h-[40px] p-2 w-full sm:w-[200px] bg-[#0f7d7f] text-white text-[14px] sm:text-[16px]"
-                  style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-                >
-                  حمل الان اخر اصدار
-                </button>
-                <button
-                  className="h-[40px] p-2 w-full sm:w-[200px] text-[#0f7d7f] text-[14px] sm:text-[16px]"
-                  style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-                >
-                  تصفح الاصدارات الاخرى
-                </button>
+                <Link href={data[0]?.magazine || "/"}>
+                  <button
+                    className="h-[40px] p-2 w-full sm:w-[200px] bg-[#0f7d7f] text-white text-[14px] sm:text-[16px]"
+                    style={{
+                      border: "1px solid #0f7d7f",
+                      borderRadius: "30px",
+                    }}
+                  >
+                    حمل الان اخر اصدار
+                  </button>
+                </Link>
+                <Link href={"/magazines"}>
+                  <button
+                    className="h-[40px] p-2 w-full sm:w-[200px] text-[#0f7d7f] text-[14px] sm:text-[16px]"
+                    style={{
+                      border: "1px solid #0f7d7f",
+                      borderRadius: "30px",
+                    }}
+                  >
+                    تصفح الاصدارات الاخرى
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="flex justify-center">

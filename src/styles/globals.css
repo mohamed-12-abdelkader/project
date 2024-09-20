@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
 
 @layer components {
   .app-container {
@@ -36,12 +36,17 @@
 }
 
 body {
-  font-family: 'Tajawal', sans-serif;
+  font-family: "Tajawal", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings: 'slnt' 0;
+  font-variation-settings: "slnt" 0;
 }
-
+.font {
+  font-family: "Tajawal", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
 .slider-container {
   display: flex;
   overflow-x: scroll;
@@ -249,7 +254,7 @@ a {
   padding-right: 35px;
 }
 .researches-search_right-element__menu-button::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 56px;
   width: 1px;
@@ -301,7 +306,7 @@ a {
     padding-right: 20px;
   }
   .researches-search_right-element__menu-button::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 44px;
     width: 1px;
@@ -341,7 +346,7 @@ a {
   z-index: 10;
 }
 .pag-btn_numbers__disabled:hover {
-  color: #e7f3f4
+  color: #e7f3f4;
 }
 .pag-btn_numbers__disabled:hover {
   background-color: #11898c;
@@ -412,7 +417,7 @@ a {
 }
 
 .bg-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -432,26 +437,42 @@ a {
   color: #11898c;
 }
 .search {
-  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
     url(../images/e2d0dcddf49fe50edc3e55fd46167996.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .training {
-  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
     url(../images/b84c9b40b64ee90e7d4edebb05a9bd28.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .suport {
-  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
     url(../images/0b5b59176accb0e4f6f6caa29fb87e3a.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 .mange {
-  background-image: linear-gradient(179.99deg, rgba(0, 0, 0, 0) -13.3%, rgba(0, 0, 0, 0.6) 82.61%),
+  background-image: linear-gradient(
+      179.99deg,
+      rgba(0, 0, 0, 0) -13.3%,
+      rgba(0, 0, 0, 0.6) 82.61%
+    ),
     url(../images/59edae449e7756a6aad1f8c5fe99d2f2.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -470,7 +491,7 @@ a {
   }
   .img_hero {
     position: relative !important;
-    width: '90%' !important;
+    width: "90%" !important;
     margin: auto !important;
     top: 0 !important;
     left: 0 !important;
@@ -480,7 +501,7 @@ a {
     position: relative !important;
     top: 0 !important;
     left: 0 !important;
-    width: '90%' !important;
+    width: "90%" !important;
     margin: auto !important;
   }
   .footer-item {

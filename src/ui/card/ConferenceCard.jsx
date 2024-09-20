@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import ContentLoader from "react-content-loader";
 
-const ConferenceCard = ({ card, loading }) => {
+const ConferenceCard = ({ card, loading, href }) => {
   if (loading) {
     return (
       <div
@@ -14,7 +15,7 @@ const ConferenceCard = ({ card, loading }) => {
           flexDirection: "column",
           justifyContent: "space-between",
         }}
-        className="h-[500px] w-[306px] m-2" // تعيين ارتفاع الكارد إلى 500 بكسل
+        className="h-[500px] w-[306px] m-2 " // تعيين ارتفاع الكارد إلى 500 بكسل
         dir="rtl"
       >
         <ContentLoader
@@ -45,7 +46,7 @@ const ConferenceCard = ({ card, loading }) => {
         flexDirection: "column",
         justifyContent: "space-between",
       }}
-      className="h-[480px] w-[306px] m-2" // تعيين ارتفاع الكارد إلى 500 بكسل
+      className="h-[480px] w-[306px] m-2 shadow my-4" // تعيين ارتفاع الكارد إلى 500 بكسل
     >
       <div>
         <Image
@@ -74,12 +75,14 @@ const ConferenceCard = ({ card, loading }) => {
         </div>
       </div>
       <div className="text-center">
-        <button
-          className="h-[35px] my-2 w-[90%] m-auto text-[#0f7d7f]"
-          style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-        >
-          اكتشف المزيد
-        </button>
+        <Link href={href || ""}>
+          <button
+            className="h-[35px] my-2 w-[90%] m-auto text-[#0f7d7f]"
+            style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+          >
+            اكتشف المزيد
+          </button>
+        </Link>
       </div>
     </div>
   );

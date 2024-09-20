@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import useGitData from "@/server/useGitData";
+import Link from "next/link";
 
 const Events = () => {
   const [data, loading, error] = useGitData({ prop: "event-home" });
@@ -44,12 +45,14 @@ const Events = () => {
             {eventData.description}
           </p>
         </div>
-        <button
-          className="m-2 h-[35px] w-[200px] text-[#0f7d7f] my-4"
-          style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-        >
-          تعرف على فعالياتنا
-        </button>
+        <Link href={"/events"}>
+          <button
+            className="m-2 h-[35px] w-[200px] text-[#0f7d7f] my-4"
+            style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
+          >
+            تعرف على فعالياتنا
+          </button>
+        </Link>
       </div>
       <div>
         <Image

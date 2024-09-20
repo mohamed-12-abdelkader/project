@@ -3,7 +3,10 @@ import React from "react";
 
 export default function AssociationMembersCard({ imageUrl, name, position }) {
   return (
-    <div dir="rtl" className="bg-white rounded-lg shadow-md overflow-hidden">
+    <div
+      dir="rtl"
+      className="bg-white mx-2 rounded-lg shadow-md overflow-hidden "
+    >
       {/* Image Container */}
       <div
         className="bg-[#D7DADA] overflow-hidden"
