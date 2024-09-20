@@ -4,40 +4,19 @@ import { useState } from "react";
 import { CgSearch } from "react-icons/cg";
 import { FaChevronDown } from "react-icons/fa6";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
-export default function Search({ placeholder }) {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
-
-  const [searchType, setSearchType] = useState(searchParams.get('type'));
+export default function Search({ handleChange, placeholder }) {
+  const [searchType, setSearchType] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = useDebouncedCallback((term) => {
-    const params = new URLSearchParams(searchParams);
-    params.set('page', '1');
-    if (term) {
-      params.set('query', term);
-    } else {
-      params.delete('query');
-    }
-
-    if (searchType) {
-      params.set('type', searchType);
-    } else {
-      params.delete("type")
-    }
-
-    replace(`${pathname}?${params.toString()}`);
+    handleChange({ term, type: searchType });
   }, 300);
 
   const handleTypeChange = (type) => {
-    setSearchType(type);
-    const params = new URLSearchParams(searchParams);
-    params.set('type', type);
-    params.set('page', '1');
-    replace(`${pathname}?${params.toString()}`);
+    setSearchType(type)
+    handleChange({ term: searchTerm, type: searchType })
   };
 
   return (
@@ -49,10 +28,11 @@ export default function Search({ placeholder }) {
         dir="rtl"
         className="input-theme-none researches-search_input text-base peer text-[#5A6161] block w-full h-full rounded-md border-gray-200 py-[9px] pl-10 placeholder:text-gray-500"
         placeholder={placeholder}
+        value={searchTerm}
         onChange={(e) => {
+          setSearchTerm(e.target.value)
           handleSearch(e.target.value);
         }}
-        defaultValue={searchParams.get('query')?.toString()}
       />
       <div className="researches-search_right-element flex-shrink-0">
         <Menu as="div" className="relative inline-block text-left">
