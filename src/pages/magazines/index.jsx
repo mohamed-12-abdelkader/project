@@ -4,7 +4,7 @@ import React from "react";
 import Card from "@/ui/card/ConferenceCard";
 import { SplideSlide } from "@splidejs/react-splide";
 import Pagination from "@/ui/researches/pagination";
-const index = () => {
+const Index = () => {
   const [data, loading] = useGitData({ prop: "magazine" });
   if (loading) {
     return (
@@ -77,4 +77,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

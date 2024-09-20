@@ -4,7 +4,7 @@ import useGitDetails from "@/server/useGitDetails";
 import { useRouter } from "next/router";
 import React from "react";
 
-const index = () => {
+const Index = () => {
   const router = useRouter();
   const { id } = router.query;
   const [data, loading] = useGitDetails({ id: id, prop: "researches" });
@@ -27,4 +27,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

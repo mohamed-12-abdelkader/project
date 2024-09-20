@@ -6,7 +6,7 @@ import useGitData from "@/server/useGitData";
 import Image from "next/image";
 import Loading from "@/components/loading/Loading";
 
-export default function index({ totalPages, researchesData }) {
+export default function Index({ totalPages, researchesData }) {
   const [data, loading] = useGitData({ prop: "researches" });
 
   if (loading) {
