@@ -10,7 +10,7 @@ const Slider = ({ title, children }) => {
 
   const handleMouseDown = (e) => {
     setIsDown(true);
-    sliderRef.current.classList.add("active");
+
     setStartX(e.pageX - sliderRef.current.offsetLeft);
     setScrollLeft(sliderRef.current.scrollLeft);
   };

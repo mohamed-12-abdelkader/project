@@ -7,13 +7,11 @@ import useGitData from "@/server/useGitData";
 import { Spinner } from "react-bootstrap";
 import Info from "@/components/about/Info";
 import DetailsAboutUs from "@/components/about/DetailsAboutUs";
-<<<<<<< HEAD
+
 import Loading from "@/components/loading/Loading";
-const index = () => {
-=======
+import Members from "@/components/about/Members";
 
 const AboutPage = () => {
->>>>>>> c74708a76c74e4567ec11553842d0e17a20df173
   const [data, loading] = useGitData({ prop: "heroAboutUs" });
 
   if (loading) {
@@ -73,39 +71,7 @@ const AboutPage = () => {
             ابقَ على اطلاع على آخر أخبار و مستجدات الجمعية
           </p>
         </div>
-        <div className="my-3 text-center md:flex justify-center">
-          {["مجلس الادارة", "مجلس الادارة", "مجلس الادارة", "مجلس الادارة"].map((label, idx) => (
-            <button
-              key={idx}
-              className="m-2 h-[35px] w-[200px] text-[#0f7d7f]"
-              style={{ border: "1px solid #0f7d7f", borderRadius: "30px" }}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap w-[95%] m-auto justify-center">
-          {Array(8).fill(null).map((_, idx) => (
-            <div key={idx} className="w-[280px] h-[300px] my-3 mx-2">
-              <div className="h-[210px] bg-[#D7DADA]">
-                <Image
-                  src={img2}
-                  width={280}
-                  height={210}
-                  className="h-[100%]"
-                  alt="Board member image"
-                />
-              </div>
-              <div className="text-center my-2">
-                <h1 className="text-xl font-bold text-[#353939] my-2">
-                  سعود صالح عبدالكريم الصواب
-                </h1>
-                <p className="text-[#353939] font-normal">رئيس مجلس الادارة</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <Members />
       </div>
 
       <div className="h-[300px] bg-section my-[50px] flex items-center px-5">

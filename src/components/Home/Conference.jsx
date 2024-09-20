@@ -73,7 +73,7 @@ const Conference = () => {
             ) : Array.isArray(data) && data.length > 0 ? (
               data.map((card, i) => (
                 <SplideSlide key={i}>
-                  <Card card={card} />
+                  <Card card={card} href={`events/${card.id}`} />
                 </SplideSlide>
               ))
             ) : (

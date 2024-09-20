@@ -4,7 +4,6 @@ import clsx from 'clsx';
 import { generatePagination } from '@/lib/utils';
 
 export default function Pagination({ totalPages, currentPage, onPageChange }) {
-  console.log(totalPages)
   const allPages = generatePagination(currentPage, totalPages);
 
   return (

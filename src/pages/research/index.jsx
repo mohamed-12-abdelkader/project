@@ -2,7 +2,6 @@ import React from "react";
 import Researches from "@/ui/researches/Researches";
 
 export default function index() {
-
   return (
     <div className="app-container mt-[80px] mb-[180px]">
       <div className="text-center">

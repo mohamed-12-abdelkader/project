@@ -29,7 +29,7 @@ const HeroSection = () => {
 
   return (
     <div
-      className="relative md:flex items-center md:h-[700px]"
+      className="relative md:flex items-center md:h-[450px]"
       style={{ overflow: "hidden" }}
     >
       <div

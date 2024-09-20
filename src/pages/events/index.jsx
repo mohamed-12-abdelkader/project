@@ -4,7 +4,7 @@ import img from "../../images/f7bf48b1dfa6d1a5bda8220c143bf41a.jpeg";
 import useGitData from "@/server/useGitData";
 import { SplideSlide } from "@splidejs/react-splide";
 
-const index = () => {
+const Index = () => {
   const [data, loading] = useGitData({ prop: "conferences" });
 
   // Handle loading state
@@ -53,7 +53,7 @@ const index = () => {
         ) : Array.isArray(data) && data.length > 0 ? (
           data.map((card, i) => (
             <SplideSlide key={i}>
-              <Card card={card} />
+              <Card card={card} href={`events/${card.id}`} />
             </SplideSlide>
           ))
         ) : (
@@ -67,4 +67,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
